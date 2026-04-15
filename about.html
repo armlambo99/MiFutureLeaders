@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Mi Future Leaders • About Us | Core Programs & Board</title>
+  <!-- Bootstrap 5 core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #FCFAF7;
+      color: #2D3A2B;
+      overflow-x: hidden;
+    }
+    
+    /* ===== ROYAL NAVBAR ===== */
+    .navbar-royal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      z-index: 1030;
+      padding: 1rem 0;
+    }
+    .navbar-royal.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #C6A43F;
+      padding: 0.5rem 0;
+    }
+    .navbar-royal.scrolled .nav-link-gold {
+      color: #3B4A35 !important;
+      text-shadow: none;
+    }
+    .navbar-royal.scrolled .brand-logo-text {
+      background: linear-gradient(135deg, #A07E2A, #C6A43F);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      transition: all 0.3s ease;
+      animation: logoGlowPulse 2s infinite alternate;
+    }
+    @keyframes logoGlowPulse {
+      0% { filter: drop-shadow(0 0 2px #C6A43F) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); }
+      100% { filter: drop-shadow(0 0 12px #FFD966) drop-shadow(0 0 6px #FF69B4) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); }
+    }
+    .brand-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFF8E7, #FFE5A3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    .nav-link-gold {
+      color: white !important;
+      font-weight: 600;
+      margin: 0 12px;
+      position: relative;
+      font-family: 'Cinzel', serif;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      transition: 0.25s;
+    }
+    .nav-link-gold::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: #C6A43F;
+      transition: 0.3s ease;
+    }
+    .nav-link-gold:hover::after { width: 100%; }
+    .nav-link-gold.active { color: #FFD966 !important; }
+    @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.3rem; }
+    }
+
+       /* DONATE BUTTON */
+    .btn-donate-gold {
+      background: linear-gradient(145deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 8px 28px;
+      border-radius: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2D3A2B !important;
+      font-family: 'Cinzel', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 18px -4px rgba(0,0,0,0.3);
+      margin-left: 20px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .about-hero {
+      position: relative;
+      width: 100%;
+      min-height: 55vh;
+      background-image: url('images/baim-hanif-pYWuOMhtc6k-unsplash.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .about-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 1;
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 7rem 2rem 4rem;
+    }
+    .about-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    }
+    @media (max-width: 768px) {
+      .about-hero-title { font-size: 2.5rem; }
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    :root {
+      --sage: #9CAF88;
+      --sage-deep: #6B7F5E;
+      --sage-soft: #E2E9DA;
+      --gold: #C6A43F;
+      --gold-dark: #A07E2A;
+    }
+    .card-sage {
+      background: var(--sage-soft);
+      border: 1px solid rgba(198, 164, 63, 0.5);
+      border-radius: 32px 12px 32px 12px;
+      transition: all 0.4s ease;
+    }
+    .gold-text {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    hr.gold-hr {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--sage-soft), transparent);
+      width: 100px;
+      margin: 1rem auto 1rem 0;
+      border: none;
+    }
+    .section-pop {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section-pop.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .global-loader-unique {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.5s;
+      opacity: 1;
+      visibility: visible;
+    }
+    .global-loader-unique.hidden { opacity: 0; visibility: hidden; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== CORE PROGRAM CARDS (WOW HOVER) ===== */
+    .core-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      height: 100%;
+      transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 1px solid rgba(198,164,63,0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .core-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(198,164,63,0.15), transparent);
+      transition: 0.6s;
+    }
+    .core-card:hover::before { left: 100%; }
+    .core-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      border-color: var(--gold);
+      box-shadow: 0 35px 50px -20px rgba(0,0,0,0.3);
+    }
+    .core-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(145deg, rgba(198,164,63,0.15), rgba(198,164,63,0.05));
+      border-radius: 20px 8px 20px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--gold-dark);
+      margin-bottom: 1.5rem;
+      transition: 0.3s;
+    }
+    .core-card:hover .core-icon {
+      transform: rotateY(10deg) scale(1.1);
+      background: linear-gradient(145deg, rgba(198,164,63,0.3), rgba(198,164,63,0.1));
+    }
+    .btn-see-more {
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      border-radius: 60px;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      transition: 0.3s;
+      margin-top: 1rem;
+    }
+    .btn-see-more:hover {
+      background: var(--gold);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    /* ===== AUTO-ROTATING BOARD CAROUSEL ===== */
+    .board-carousel-container {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 0 2rem;
+    }
+    .board-track {
+      display: flex;
+      gap: 30px;
+      animation: scrollBoard 30s linear infinite;
+      width: fit-content;
+    }
+    .board-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes scrollBoard {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .board-card {
+      width: 260px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.2);
+      border: 1px solid rgba(198,164,63,0.2);
+      position: relative;
+    }
+    .board-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      border-color: var(--gold);
+      box-shadow: 0 30px 45px -15px rgba(0,0,0,0.25);
+      background: linear-gradient(145deg, #ffffff, #fffaf0);
+    }
+    .board-avatar {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(145deg, var(--sage-soft), var(--sage));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2.5rem;
+      color: var(--gold-dark);
+      border: 3px solid var(--gold);
+      transition: 0.3s;
+    }
+    .board-card:hover .board-avatar {
+      transform: scale(1.05);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(198,164,63,0.3);
+    }
+    .board-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--sage-deep);
+      margin-bottom: 0.3rem;
+    }
+    .board-role {
+      font-size: 0.9rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    .plus-icon {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    .board-card:hover .plus-icon {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .plus-icon:hover {
+      background: var(--gold-dark);
+      transform: rotate(90deg) scale(1.1);
+    }
+    /* Social modal popup */
+    .social-popup {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1E2A1C;
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 12px 24px;
+      display: flex;
+      gap: 20px;
+      z-index: 1050;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      border: 1px solid var(--gold);
+      transform: scale(0);
+      transition: 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.2);
+      transform-origin: bottom right;
+    }
+    .social-popup.active {
+      transform: scale(1);
+    }
+    .social-popup a {
+      color: #e6d49a;
+      font-size: 1.5rem;
+      transition: 0.2s;
+    }
+    .social-popup a:hover { color: white; transform: translateY(-3px); }
+    .close-popup {
+      background: none;
+      border: none;
+      color: var(--gold);
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    /* ===== VALUES MINI CARDS ===== */
+    .value-mini {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      height: 100%;
+      transition: 0.3s;
+      border: 1px solid rgba(198,164,63,0.2);
+    }
+    .value-mini:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+    }
+    .value-mini i { font-size: 2rem; color: var(--gold); margin-bottom: 0.8rem; }
+
+    /* ===== FOOTER ===== */
+    .footer-simple {
+      background: #1E2A1C;
+      border-top: 4px solid var(--gold);
+      color: #E9E5D8;
+    }
+    .footer-simple a { color: #D4D0BB; text-decoration: none; transition: 0.2s; }
+    .footer-simple a:hover { color: var(--gold); }
+
+    /* Modal styling */
+    .modal-gold .modal-content {
+      background: #1E2A1C;
+      border: 2px solid var(--gold);
+      border-radius: 28px;
+      color: #E9E5D8;
+    }
+    .modal-gold .modal-header {
+      border-bottom-color: var(--gold);
+    }
+    .modal-gold .btn-close {
+      filter: invert(1);
+    }
+
+     /* PREMIUM FOOTER STYLES - Add to your existing CSS */
+  .footer-premium {
+    background: linear-gradient(135deg, #1F2E1C 0%, #2D3A2B 50%, #1F2E1C 100%);
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .footer-waves {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .footer-waves svg {
+    width: 100%;
+    height: 70px;
+  }
+
+  .footer-main-content {
+    padding: 60px 0 40px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Brand Section */
+  .footer-brand-wrapper {
+    position: relative;
+  }
+
+  .footer-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .footer-logo-img:hover {
+    transform: scale(1.05);
+  }
+
+  .footer-brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #E8D5A3;
+    line-height: 1.2;
+  }
+
+  .footer-brand-accent {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #C6A43F, #FFD966);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+  }
+
+  .footer-tagline {
+    color: #C8D5B5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 15px 0;
+    font-style: italic;
+    border-left: 3px solid #C6A43F;
+    padding-left: 16px;
+  }
+
+  .footer-mission-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(198, 164, 63, 0.15);
+    border: 1px solid rgba(198, 164, 63, 0.4);
+    border-radius: 60px;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #FFE5A3;
+    backdrop-filter: blur(4px);
+    margin-top: 10px;
+  }
+
+  .footer-mission-badge i {
+    color: #C6A43F;
+    font-size: 0.9rem;
+  }
+
+  /* Section Titles */
+  .footer-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFE5A3;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .footer-section-title i {
+    color: #C6A43F;
+    font-size: 1.1rem;
+  }
+
+  .footer-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #C6A43F, transparent);
+    border-radius: 3px;
+  }
+
+  /* Links Styling */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    color: #C8D5B5;
+    text-decoration: none;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .footer-links a i {
+    font-size: 0.7rem;
+    color: #C6A43F;
+    transition: transform 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: #FFD966;
+    transform: translateX(6px);
+  }
+
+  .footer-links a:hover i {
+    transform: translateX(3px);
+  }
+
+  /* Contact List */
+  .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-icon-circle {
+    width: 38px;
+    height: 38px;
+    background: rgba(198, 164, 63, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+
+  .contact-icon-circle i {
+    color: #C6A43F;
+    font-size: 1rem;
+  }
+
+  .footer-contact-list li:hover .contact-icon-circle {
+    background: #C6A43F;
+    transform: scale(1.1);
+  }
+
+  .footer-contact-list li:hover .contact-icon-circle i {
+    color: #1F2E1C;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9CAF88;
+  }
+
+  .contact-details a,
+  .contact-details span {
+    color: #E8D5A3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .contact-details a:hover {
+    color: #FFD966;
+  }
+
+  /* Newsletter Form */
+  .footer-newsletter-text {
+    color: #C8D5B5;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .newsletter-input-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 60px;
+    border: 1px solid rgba(198, 164, 63, 0.4);
+    transition: all 0.3s;
+  }
+
+  .newsletter-input-group:focus-within {
+    border-color: #C6A43F;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(198, 164, 63, 0.2);
+  }
+
+  .newsletter-input-group input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 18px;
+    color: white;
+    font-size: 0.85rem;
+    outline: none;
+  }
+
+  .newsletter-input-group input::placeholder {
+    color: #9CAF88;
+  }
+
+  .newsletter-input-group button {
+    background: linear-gradient(135deg, #C6A43F, #A07E2A);
+    border: none;
+    border-radius: 60px;
+    width: 46px;
+    height: 46px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #1F2E1C;
+  }
+
+  .newsletter-input-group button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #FFD966, #C6A43F);
+  }
+
+  .newsletter-feedback {
+    font-size: 0.7rem;
+    margin-top: 8px;
+    color: #FFD966;
+    text-align: center;
+  }
+
+  /* Social Icons */
+  .footer-social-section {
+    margin-top: 24px;
+  }
+
+  .social-label {
+    font-size: 0.75rem;
+    color: #9CAF88;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .social-icons-wrapper {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(198, 164, 63, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C6A43F;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+  }
+
+  .social-icon:hover {
+    background: #C6A43F;
+    color: #1F2E1C;
+    transform: translateY(-4px) rotate(360deg);
+    box-shadow: 0 5px 15px rgba(198, 164, 63, 0.4);
+  }
+
+  /* Bottom Bar */
+  .footer-bottom {
+    border-top: 1px solid rgba(198, 164, 63, 0.25);
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .copyright {
+    color: #9CAF88;
+    font-size: 0.8rem;
+  }
+
+  .copyright i {
+    margin-right: 4px;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .legal-links a {
+    color: #C8D5B5;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+  }
+
+  .legal-links a:hover {
+    color: #FFD966;
+  }
+
+  .separator {
+    color: #C6A43F;
+    font-size: 0.7rem;
+  }
+
+  .back-to-top-btn {
+    background: linear-gradient(135deg, #C6A43F, #A07E2A);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 40px;
+    color: #1F2E1C;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .back-to-top-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(198, 164, 63, 0.4);
+    background: linear-gradient(135deg, #FFD966, #C6A43F);
+  }
+
+  .btn-donate-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(145deg, #e6c35c, #C6A43F);
+      box-shadow: 0 14px 22px -8px rgba(0,0,0,0.4);
+      color: #1F2E1C !important;
+    }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .footer-bottom-flex {
+      flex-direction: column;
+      text-align: center;
+    }
+    .legal-links {
+      justify-content: center;
+    }
+    .footer-waves svg {
+      height: 50px;
+    }
+    .footer-waves {
+      top: -45px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-main-content {
+      padding: 40px 0 30px;
+    }
+    .footer-logo-group {
+      justify-content: center;
+    }
+    .footer-brand-text {
+      text-align: center;
+    }
+    .footer-tagline {
+      text-align: center;
+    }
+    .footer-mission-badge {
+      margin: 10px auto;
+      display: flex;
+      width: fit-content;
+    }
+    .footer-section-title {
+      justify-content: center;
+    }
+    .footer-section-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+    }
+    .footer-links li a {
+      justify-content: center;
+    }
+    .footer-contact-list li {
+      justify-content: center;
+    }
+    .footer-newsletter-text {
+      text-align: center;
+    }
+    .social-icons-wrapper {
+      justify-content: center;
+    }
+  }
+
+  
+    @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.2rem; }
+      .navbar-collapse {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      .navbar-royal.scrolled .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+      }
+      .navbar-royal.scrolled .navbar-collapse .nav-link-gold {
+        color: #3B4A35 !important;
+      }
+      .nav-link-gold {
+        text-align: center;
+        margin: 8px 0;
+      }
+      .btn-donate-gold {
+        display: inline-block;
+        margin: 12px auto 0;
+        width: fit-content;
+      }
+      .ms-auto.d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    
+    @media (max-width: 992px) {
+      .navbar-royal { padding: 0.8rem 0; }
+      .nav-logo-img { height: 42px; }
+      .brand-logo-text { font-size: 1.5rem; }
+      .nav-link-gold { margin: 0 6px; font-size: 0.9rem; }
+      .btn-donate-gold { padding: 6px 20px; font-size: 0.8rem; margin-left: 10px; }
+    }
+
+     @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.2rem; }
+      .navbar-collapse {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      .navbar-royal.scrolled .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+      }
+      .navbar-royal.scrolled .navbar-collapse .nav-link-gold {
+        color: #3B4A35 !important;
+      }
+      .nav-link-gold {
+        text-align: center;
+        margin: 8px 0;
+      }
+      .btn-donate-gold {
+        display: inline-block;
+        margin: 12px auto 0;
+        width: fit-content;
+      }
+      .ms-auto.d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="uniqueLoader" class="global-loader-unique">
+  <div style="font-size: 4rem; color: #C6A43F;"><i class="fas fa-crown"></i></div>
+  <div class="mt-4 fw-bold" style="font-family: 'Cinzel'; letter-spacing: 4px; color: #A07E2A;">MI FUTURE LEADERS</div>
+  <div style="width: 50px; height: 50px; border: 2px solid rgba(198,164,63,0.2); border-top: 2px solid #C6A43F; border-radius: 50%; animation: spin 1s linear infinite; margin-top: 20px;"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-royal" id="royalNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Mi Future Leaders Logo" class="nav-logo-img">
+      
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#goldNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="goldNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold active" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="service.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="hoem.html">PARTNERS</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="d-flex">
+        <a href="#donate" class="btn btn-donate-gold"><i class="fas fa-heart me-2"></i> DONATE</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <h1 class="about-hero-title">About Us</h1>
+  </div>
+</section>
+
+<main>
+  <div class="container my-5">
+    <div class="card-sage p-4 text-center section-pop" style="background: rgba(156, 175, 136, 0.1); border-radius: 60px 16px 60px 16px;">
+      <i class="bi bi-shield-fill-check fs-2" style="color: var(--gold);"></i>
+      <span class="fs-5 fw-semibold ms-2">Structured, trauma-informed mental health education — prevention, not clinical intervention.</span>
+    </div>
+  </div>
+
+  <!-- MISSION & VISION -->
+  <div class="container my-5 py-3">
+    <div class="row g-5">
+      <div class="col-md-6 section-pop">
+        <div class="card-sage p-5 h-100" style="background: white;">
+          <h2 class="display-6 fw-bold gold-text">⚜️ Our Mission</h2>
+          <hr class="gold-hr">
+          <p class="fs-5">To create a safe space for future leaders to express their mental health-related issues and apply possible intervention strategies to improve their mental health status, with priority given to disadvantaged communities and children/youth from adverse backgrounds.</p>
+        </div>
+      </div>
+      <div class="col-md-6 section-pop">
+        <div class="card-sage p-5 h-100" style="background: white;">
+          <h2 class="display-6 fw-bold gold-text">⚜️ Our Vision</h2>
+          <hr class="gold-hr">
+          <ul class="fs-5">
+            <li>Build leaders with a clear mindset</li>
+            <li>Eradicate the stigma around mental health</li>
+            <li>Provide quality counselling services and safe spaces for children</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT TEXT + CONTACT -->
+  <div class="container my-4">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-8 section-pop">
+        <div class="p-4" style="background: var(--sage-soft); border-radius: 28px;">
+          <h3 class="gold-text fw-bold">Who We Are</h3>
+          <p class="fs-5">Mi Future Leaders provides structured, trauma-informed mental health education programmes for adolescents in under-resourced communities. Our services focus on prevention, emotional skills development, and early support rather than clinical intervention or therapy.</p>
+          <div class="mt-3 d-flex gap-4 flex-wrap">
+            <span><i class="fas fa-phone-alt me-2" style="color: var(--gold);"></i> <strong>082 303 6050</strong></span>
+            <span><i class="fas fa-envelope me-2" style="color: var(--gold);"></i> info@mifutureleaders.org</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 section-pop text-center">
+        <i class="fas fa-hand-holding-heart fs-1" style="color: var(--gold);"></i>
+        <p class="mt-2 fw-bold">Non-clinical · Prevention-focused</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE PROGRAMS SECTION -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-5 section-pop">
+      <h2 class="display-6 fw-bold gold-text">⚜️ Core Programs</h2>
+      <hr class="gold-hr mx-auto">
+      <p class="lead">Our flagship initiatives for youth empowerment</p>
+    </div>
+    <div class="row g-4">
+      <!-- Program 1 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal1">
+          <div class="core-icon"><i class="fas fa-brain"></i></div>
+          <h4 class="fw-bold">Resilient Minds</h4>
+          <p class="small">6-week school-based emotional literacy programme</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+      <!-- Program 2 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal2">
+          <div class="core-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h4 class="fw-bold">Counselling Services</h4>
+          <p class="small">Non-clinical emotional support & guidance</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+      <!-- Program 3 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal3">
+          <div class="core-icon"><i class="fas fa-chalkboard-user"></i></div>
+          <h4 class="fw-bold">Workshop & Facilitation</h4>
+          <p class="small">Mental health awareness & resilience training</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+      <!-- Program 4 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal4">
+          <div class="core-icon"><i class="fas fa-chart-line"></i></div>
+          <h4 class="fw-bold">M&E & Reporting</h4>
+          <p class="small">Monitoring, Evaluation & Impact tracking</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+      <!-- Program 5 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal5">
+          <div class="core-icon"><i class="fas fa-arrow-right-to-bracket"></i></div>
+          <h4 class="fw-bold">Referral & Signposting</h4>
+          <p class="small">Warm connections to clinical partners</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+      <!-- Program 6 -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="core-card" data-bs-toggle="modal" data-bs-target="#programModal6">
+          <div class="core-icon"><i class="fas fa-users"></i></div>
+          <h4 class="fw-bold">Capacity Building</h4>
+          <p class="small">Training for educators & youth workers</p>
+          <button class="btn-see-more">See More →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR VALUES -->
+  <div class="container my-5 py-3">
+    <div class="text-center mb-4 section-pop">
+      <h2 class="display-6 fw-bold gold-text">⚜️ Our Values</h2>
+      <hr class="gold-hr mx-auto">
+    </div>
+    <div class="row g-4">
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-brain"></i><h6>Mindfulness</h6></div></div>
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-heart"></i><h6>Compassion</h6></div></div>
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-scale-balanced"></i><h6>Integrity</h6></div></div>
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-tree"></i><h6>Resilience</h6></div></div>
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-feather"></i><h6>Courage</h6></div></div>
+      <div class="col-md-2 col-6 section-pop"><div class="value-mini"><i class="fas fa-handshake"></i><h6>Social Cohesion</h6></div></div>
+    </div>
+  </div>
+
+  <!-- BOARD OF DIRECTORS (AUTO-ROTATING CAROUSEL) -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-4 section-pop">
+      <h2 class="display-6 fw-bold gold-text">⚜️ Board of Directors</h2>
+      <hr class="gold-hr mx-auto">
+      <p class="lead">Visionary leaders guiding our mission</p>
+    </div>
+    <div class="board-carousel-container">
+      <div class="board-track" id="boardTrack">
+        <!-- First set -->
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Aaron Mlambo</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Dr. Thandiwe Nkosi</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Michael Petersen</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Lerato Dlamini</div><div class="board-role">Programs Director</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-globe"></i></div><div class="board-name">Sipho Khumalo</div><div class="board-role">Community Liaison</div><div class="plus-icon" data-name="Sipho Khumalo" data-role="Community Liaison"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-balance-scale"></i></div><div class="board-name">Nosipho Mbeki</div><div class="board-role">Legal Advisor</div><div class="plus-icon" data-name="Nosipho Mbeki" data-role="Legal Advisor"><i class="fas fa-plus"></i></div></div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Aaron Mlambo</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Dr. Thandiwe Nkosi</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Michael Petersen</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Lerato Dlamini</div><div class="board-role">Programs Director</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-globe"></i></div><div class="board-name">Sipho Khumalo</div><div class="board-role">Community Liaison</div><div class="plus-icon" data-name="Sipho Khumalo" data-role="Community Liaison"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-balance-scale"></i></div><div class="board-name">Nosipho Mbeki</div><div class="board-role">Legal Advisor</div><div class="plus-icon" data-name="Nosipho Mbeki" data-role="Legal Advisor"><i class="fas fa-plus"></i></div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Social Popup -->
+<div id="socialPopup" class="social-popup">
+  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  <button class="close-popup" id="closePopup"><i class="fas fa-times"></i></button>
+</div>
+
+<!-- MODALS for Core Programs -->
+<div class="modal fade modal-gold" id="programModal1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Resilient Minds Programme</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>6-week group-based emotional literacy programme</strong> delivered in public schools and community centres. Topics include: understanding emotions, stress management, healthy coping, boundaries, identity, and help-seeking.</p></div></div></div>
+</div>
+<div class="modal fade modal-gold" id="programModal2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Counselling Services</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Non-clinical, trauma-informed emotional support. Short-term supportive counselling focusing on coping skills, emotional regulation, and psychoeducation. Referrals provided for clinical needs.</p></div></div></div></div>
+<div class="modal fade modal-gold" id="programModal3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Workshop & Facilitation</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Mental health awareness sessions, stress management workshops, and resilience facilitation for youth, educators, and community workers. Custom half-day or full-day formats available.</p></div></div></div></div>
+<div class="modal fade modal-gold" id="programModal4" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">M&E & Reporting</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Comprehensive monitoring and evaluation: attendance tracking, pre/post reflection tools, facilitator notes, and impact reports for partners and funders.</p></div></div></div></div>
+<div class="modal fade modal-gold" id="programModal5" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Referral & Signposting</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Warm connections to trusted clinical partners including psychologists, social workers, and community health resources. Ethical boundary maintained — we do not provide therapy.</p></div></div></div></div>
+<div class="modal fade modal-gold" id="programModal6" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Capacity Building</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Training for educators and youth workers: identifying emotional distress, referral pathway guidance, programme adaptation support, and trauma-informed practice embedding.</p></div></div></div></div>
+
+<!-- FOOTER -->
+<footer class="footer-premium">
+  <div class="footer-waves">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="#2D3A2B" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+  
+  <div class="footer-main-content">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Column 1: Brand & Mission -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand-wrapper">
+            <div class="footer-logo-group">
+              <img src="images/logo.png" alt="Mi Future Leaders Logo" class="footer-logo-img" onerror="this.style.display='none'">
+              <div class="footer-brand-text">
+                <span class="footer-brand-name">MI FUTURE</span>
+                <span class="footer-brand-accent">LEADERS</span>
+              </div>
+            </div>
+            <p class="footer-tagline">"Empowering young minds through trauma-informed mental health education."</p>
+            <div class="footer-mission-badge">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span>Strengths-Based · Trauma-Informed · Culturally Sensitive</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links with Icons -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-compass"></i>
+              <span>Navigate</span>
+            </h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+              <li><a href="hoem.html"><i class="fas fa-chevron-right"></i> Partners</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Column 3: Contact Info with Style -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-address-card"></i>
+              <span>Connect</span>
+            </h4>
+            <ul class="footer-contact-list">
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:info@mifutureleaders.org">info@mifutureleaders.org</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+27825559900">+27 82 555 9900</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Location</span>
+                  <span>Cape Town | Johannesburg</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Column 4: Newsletter & Social -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-star-of-life"></i>
+              <span>Stay Inspired</span>
+            </h4>
+            <p class="footer-newsletter-text">Join our community and receive uplifting stories & mental health resources.</p>
+            <form class="footer-newsletter-form" id="footerNewsletterForm">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+              <div id="footerNewsletterMsg" class="newsletter-feedback"></div>
+            </form>
+            <div class="footer-social-section">
+              <span class="social-label">Follow our journey</span>
+              <div class="social-icons-wrapper">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-flex">
+        <div class="copyright">
+          <i class="far fa-copyright"></i> 2026 Mi Future Leaders — Mental Health Education with Dignity
+        </div>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="separator">•</span>
+          <a href="#">Terms of Service</a>
+          <span class="separator">•</span>
+          <a href="#">Ethical Framework</a>
+        </div>
+        <div class="back-to-top">
+          <button id="backToTopBtn" class="back-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+            <span>Top</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function() {
+
+     const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Newsletter Form Handler
+    const footerNewsletter = document.getElementById('footerNewsletterForm');
+    const newsletterMsg = document.getElementById('footerNewsletterMsg');
+    
+    if (footerNewsletter) {
+      footerNewsletter.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        
+        if (email && email.includes('@')) {
+          newsletterMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+          newsletterMsg.style.color = '#FFD966';
+          
+          // Simulate subscription (replace with actual API call later)
+          setTimeout(() => {
+            newsletterMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thanks for subscribing! We\'ll keep you inspired.';
+            newsletterMsg.style.color = '#C6A43F';
+            emailInput.value = '';
+            setTimeout(() => {
+              newsletterMsg.innerHTML = '';
+            }, 5000);
+          }, 1000);
+        } else {
+          newsletterMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please enter a valid email address.';
+          newsletterMsg.style.color = '#FFA07A';
+          setTimeout(() => {
+            newsletterMsg.innerHTML = '';
+          }, 3000);
+        }
+      });
+    }
+
+
+    const loader = document.getElementById('uniqueLoader');
+    window.addEventListener('load', () => { setTimeout(() => loader.classList.add('hidden'), 500); initScrollReveal(); attachNavScroll(); initSocialPopups(); });
+    
+    function attachNavScroll() {
+      const nav = document.getElementById('royalNav');
+      window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
+    }
+    
+    function initScrollReveal() {
+      const popElements = document.querySelectorAll('.section-pop');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.15 });
+      popElements.forEach(el => observer.observe(el));
+      popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); });
+    }
+    
+    // Social popup for board members
+    function initSocialPopups() {
+      const plusButtons = document.querySelectorAll('.plus-icon');
+      const popup = document.getElementById('socialPopup');
+      const closeBtn = document.getElementById('closePopup');
+      
+      plusButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const name = btn.getAttribute('data-name');
+          const role = btn.getAttribute('data-role');
+          const facebookLink = `https://facebook.com/share?text=${encodeURIComponent(name)}`;
+          const instagramLink = `https://instagram.com`;
+          const linkedinLink = `https://linkedin.com`;
+          const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(name + ' - ' + role)}`;
+          popup.querySelectorAll('a')[0].href = facebookLink;
+          popup.querySelectorAll('a')[1].href = instagramLink;
+          popup.querySelectorAll('a')[2].href = linkedinLink;
+          popup.querySelectorAll('a')[3].href = twitterLink;
+          popup.classList.add('active');
+          setTimeout(() => { document.addEventListener('click', closePopupOutside); }, 100);
+        });
+      });
+      
+      function closePopupOutside(e) {
+        if(!popup.contains(e.target) && !e.target.classList.contains('plus-icon')) {
+          popup.classList.remove('active');
+          document.removeEventListener('click', closePopupOutside);
+        }
+      }
+      if(closeBtn) closeBtn.addEventListener('click', () => { popup.classList.remove('active'); document.removeEventListener('click', closePopupOutside); });
+    }
+  })();
+</script>
+</body>
+</html>

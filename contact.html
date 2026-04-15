@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Mi Future Leaders • Contact Us | Get in Touch</title>
+  <!-- Bootstrap 5 core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #FCFAF7;
+      color: #2D3A2B;
+      overflow-x: hidden;
+    }
+    
+    /* ===== NAVBAR ===== */
+    .navbar-royal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      z-index: 1030;
+      padding: 1rem 0;
+    }
+    .navbar-royal.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #C6A43F;
+      padding: 0.5rem 0;
+    }
+    .navbar-royal.scrolled .nav-link-gold {
+      color: #3B4A35 !important;
+      text-shadow: none;
+    }
+    .navbar-royal.scrolled .brand-logo-text {
+      background: linear-gradient(135deg, #A07E2A, #C6A43F);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      transition: all 0.3s ease;
+      animation: logoGlowPulse 2s infinite alternate;
+    }
+    @keyframes logoGlowPulse {
+      0% { filter: drop-shadow(0 0 2px #C6A43F) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); }
+      100% { filter: drop-shadow(0 0 12px #FFD966) drop-shadow(0 0 6px #FF69B4) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); }
+    }
+    .brand-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFF8E7, #FFE5A3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    .nav-link-gold {
+      color: white !important;
+      font-weight: 600;
+      margin: 0 12px;
+      position: relative;
+      font-family: 'Cinzel', serif;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      transition: 0.25s;
+    }
+    .nav-link-gold::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: #C6A43F;
+      transition: 0.3s ease;
+    }
+    .nav-link-gold:hover::after { width: 100%; }
+    .nav-link-gold.active { color: #FFD966 !important; }
+    .btn-donate-gold {
+      background: linear-gradient(145deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 8px 28px;
+      border-radius: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2D3A2B !important;
+      font-family: 'Cinzel', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 18px -4px rgba(0,0,0,0.3);
+      margin-left: 20px;
+    }
+    .btn-donate-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(145deg, #e6c35c, #C6A43F);
+      box-shadow: 0 14px 22px -8px rgba(0,0,0,0.4);
+      color: #1F2E1C !important;
+    }
+    .navbar-toggler { border: none; background: transparent; }
+    .navbar-toggler:focus { box-shadow: none; outline: none; }
+    .navbar-toggler-icon { filter: invert(1); transition: all 0.3s; }
+    .navbar-royal.scrolled .navbar-toggler-icon { filter: invert(0); }
+    @media (max-width: 992px) {
+      .navbar-royal { padding: 0.8rem 0; }
+      .nav-logo-img { height: 42px; }
+      .brand-logo-text { font-size: 1.5rem; }
+      .nav-link-gold { margin: 0 6px; font-size: 0.9rem; }
+      .btn-donate-gold { padding: 6px 20px; font-size: 0.8rem; margin-left: 10px; }
+    }
+    @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.2rem; }
+      .navbar-collapse {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      .navbar-royal.scrolled .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+      }
+      .navbar-royal.scrolled .navbar-collapse .nav-link-gold { color: #3B4A35 !important; }
+      .nav-link-gold { text-align: center; margin: 8px 0; }
+      .btn-donate-gold { display: inline-block; margin: 12px auto 0; width: fit-content; }
+      .ms-auto.d-flex { flex-direction: column; align-items: center; }
+    }
+
+    /* ===== PAGE HERO ===== */
+    .contact-hero {
+      position: relative;
+      width: 100%;
+      min-height: 45vh;
+      background-image: url('images/contact-hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .contact-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 1;
+    }
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 7rem 2rem 4rem;
+    }
+    .contact-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    }
+    .contact-hero-sub {
+      color: rgba(255,255,240,0.9);
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .contact-hero-title { font-size: 2.5rem; }
+      .contact-hero { min-height: 35vh; }
+      .contact-hero-content { padding: 6rem 1.5rem 3rem; }
+    }
+
+    /* ===== GLOBAL STYLES ===== */
+    :root {
+      --sage: #9CAF88;
+      --sage-deep: #6B7F5E;
+      --sage-soft: #E2E9DA;
+      --gold: #C6A43F;
+      --gold-dark: #A07E2A;
+    }
+    .card-sage {
+      background: var(--sage-soft);
+      border: 1px solid rgba(198, 164, 63, 0.5);
+      border-radius: 32px 12px 32px 12px;
+      transition: all 0.4s ease;
+    }
+    .card-sage:hover { transform: translateY(-5px); border-color: var(--gold); }
+    .gold-text {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    hr.gold-hr {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--sage-soft), transparent);
+      width: 100px;
+      margin: 1rem auto 1rem 0;
+      border: none;
+    }
+    .section-pop {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section-pop.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .global-loader-unique {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.5s;
+      opacity: 1;
+      visibility: visible;
+    }
+    .global-loader-unique.hidden { opacity: 0; visibility: hidden; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== CONTACT INFO CARDS ===== */
+    .contact-info-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 1px solid rgba(198,164,63,0.2);
+    }
+    .contact-info-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold);
+      box-shadow: 0 25px 40px -15px rgba(0,0,0,0.15);
+    }
+    .contact-info-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(145deg, rgba(198,164,63,0.15), rgba(198,164,63,0.05));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      font-size: 2rem;
+      color: var(--gold-dark);
+      transition: 0.3s;
+    }
+    .contact-info-card:hover .contact-info-icon {
+      background: linear-gradient(145deg, var(--gold), var(--gold-dark));
+      color: white;
+      transform: scale(1.05);
+    }
+    .contact-info-card h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-info-card p, .contact-info-card a {
+      color: #5a6e55;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-info-card a:hover { color: var(--gold); }
+
+    /* ===== FORM STYLES ===== */
+    .contact-form-wrapper {
+      background: white;
+      border-radius: 32px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+      border: 1px solid rgba(198,164,63,0.2);
+    }
+    .form-control-custom {
+      background: #FCFAF7;
+      border: 1.5px solid #E0D6C5;
+      border-radius: 16px;
+      padding: 12px 20px;
+      transition: all 0.3s;
+    }
+    .form-control-custom:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(198,164,63,0.15);
+      outline: none;
+      background: white;
+    }
+    .form-control-custom.error {
+      border-color: #dc3545;
+      background: #fff8f8;
+    }
+    .btn-submit {
+      background: linear-gradient(145deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 14px 40px;
+      border-radius: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2D3A2B;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(145deg, #e6c35c, #C6A43F);
+      box-shadow: 0 10px 20px rgba(198,164,63,0.3);
+    }
+
+    /* ===== MAP ===== */
+    .map-container {
+      border-radius: 28px;
+      overflow: hidden;
+      border: 3px solid var(--gold);
+      height: 350px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(0.1) contrast(1.05);
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(198,164,63,0.2);
+      transition: 0.3s;
+    }
+    .faq-question {
+      padding: 1.2rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      color: var(--sage-deep);
+    }
+    .faq-question i {
+      color: var(--gold);
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      color: #5a6e55;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-answer {
+      padding: 0 1.5rem 1.2rem 1.5rem;
+      max-height: 300px;
+    }
+
+    /* ===== PREMIUM FOOTER ===== */
+    .footer-premium {
+      background: linear-gradient(135deg, #1F2E1C 0%, #2D3A2B 50%, #1F2E1C 100%);
+      position: relative;
+      margin-top: 80px;
+    }
+    .footer-waves {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+    .footer-waves svg { width: 100%; height: 70px; }
+    .footer-main-content { padding: 60px 0 40px 0; position: relative; z-index: 2; }
+    .footer-logo-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-logo-img {
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+      transition: transform 0.3s ease;
+    }
+    .footer-logo-img:hover { transform: scale(1.05); }
+    .footer-brand-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #E8D5A3;
+      line-height: 1.2;
+    }
+    .footer-brand-accent {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #C6A43F, #FFD966);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 3px;
+    }
+    .footer-tagline {
+      color: #C8D5B5;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 15px 0;
+      font-style: italic;
+      border-left: 3px solid #C6A43F;
+      padding-left: 16px;
+    }
+    .footer-section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFE5A3;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #C6A43F, transparent);
+      border-radius: 3px;
+    }
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a {
+      color: #C8D5B5;
+      text-decoration: none;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .footer-links a:hover { color: #FFD966; transform: translateX(6px); }
+    .footer-contact-list { list-style: none; padding: 0; margin: 0; }
+    .footer-contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-icon-circle {
+      width: 38px;
+      height: 38px;
+      background: rgba(198, 164, 63, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    .contact-icon-circle i { color: #C6A43F; font-size: 1rem; }
+    .footer-contact-list li:hover .contact-icon-circle {
+      background: #C6A43F;
+      transform: scale(1.1);
+    }
+    .footer-contact-list li:hover .contact-icon-circle i { color: #1F2E1C; }
+    .contact-details { display: flex; flex-direction: column; }
+    .contact-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #9CAF88;
+    }
+    .contact-details a, .contact-details span {
+      color: #E8D5A3;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(198, 164, 63, 0.25);
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .footer-bottom-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .copyright { color: #9CAF88; font-size: 0.8rem; }
+    .legal-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .legal-links a { color: #C8D5B5; text-decoration: none; font-size: 0.75rem; }
+    .legal-links a:hover { color: #FFD966; }
+    .separator { color: #C6A43F; font-size: 0.7rem; }
+    .back-to-top-btn {
+      background: linear-gradient(135deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 40px;
+      color: #1F2E1C;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .back-to-top-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(198, 164, 63, 0.4);
+      background: linear-gradient(135deg, #FFD966, #C6A43F);
+    }
+    @media (max-width: 992px) {
+      .footer-bottom-flex { flex-direction: column; text-align: center; }
+      .legal-links { justify-content: center; }
+      .footer-waves svg { height: 50px; }
+      .footer-waves { top: -45px; }
+    }
+    @media (max-width: 768px) {
+      .footer-main-content { padding: 40px 0 30px; }
+      .footer-logo-group { justify-content: center; }
+      .footer-tagline { text-align: center; }
+      .footer-section-title { justify-content: center; }
+      .footer-section-title::after { left: 50%; transform: translateX(-50%); width: 60px; }
+      .footer-links li a { justify-content: center; }
+      .footer-contact-list li { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="uniqueLoader" class="global-loader-unique">
+  <div style="font-size: 4rem; color: #C6A43F;"><i class="fas fa-crown"></i></div>
+  <div class="mt-4 fw-bold" style="font-family: 'Cinzel'; letter-spacing: 4px; color: #A07E2A;">MI FUTURE LEADERS</div>
+  <div style="width: 50px; height: 50px; border: 2px solid rgba(198,164,63,0.2); border-top: 2px solid #C6A43F; border-radius: 50%; animation: spin 1s linear infinite; margin-top: 20px;"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-royal" id="royalNav">
+  <div class="container">
+    <a class="navbar-brand" href="contact.html">
+      <img src="images/logo.png" alt="Mi Future Leaders Logo" class="nav-logo-img" onerror="this.style.display='none'">
+      
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#goldNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="goldNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="service.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="hoem.html">PARTNERS</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold active" href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="d-flex">
+        <a href="#donate" class="btn btn-donate-gold" id="donateNavBtn"><i class="fas fa-heart me-2"></i> DONATE</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="contact-hero">
+  <div class="contact-hero-overlay"></div>
+  <div class="contact-hero-content">
+    <h1 class="contact-hero-title">Get in Touch</h1>
+    <p class="contact-hero-sub">We'd love to hear from you — whether you're a school, partner, donor, or community member.</p>
+  </div>
+</section>
+
+<main>
+  <!-- CONTACT INFO CARDS -->
+  <div class="container my-5 py-4">
+    <div class="row g-4">
+      <div class="col-md-4 section-pop">
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h4>Visit Us</h4>
+          <p>76 Strand Street, Cape Town<br>8001, South Africa</p>
+          <p class="mt-2"><small>Johannesburg: 15 Skeen Blvd, Braamfontein</small></p>
+        </div>
+      </div>
+      <div class="col-md-4 section-pop">
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+          <h4>Call Us</h4>
+          <p><a href="tel:+27825559900">+27 82 555 9900</a></p>
+          <p><small>Mon-Fri: 9am - 5pm</small></p>
+        </div>
+      </div>
+      <div class="col-md-4 section-pop">
+        <div class="contact-info-card">
+          <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+          <h4>Email Us</h4>
+          <p><a href="mailto:info@mifutureleaders.org">info@mifutureleaders.org</a></p>
+          <p><a href="mailto:partnerships@mifutureleaders.org">partnerships@mifutureleaders.org</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM & MAP -->
+  <div class="container my-5 py-3">
+    <div class="row g-5">
+      <div class="col-lg-6 section-pop">
+        <div class="contact-form-wrapper">
+          <h2 class="display-6 gold-text fw-bold mb-3">⚜️ Send a Message</h2>
+          <hr class="gold-hr">
+          <p class="mb-4">Fill out the form below and our team will respond within 24 hours.</p>
+          
+          <form id="contactPageForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-custom" id="contactFirstName" placeholder="First Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-custom" id="contactLastName" placeholder="Last Name" required>
+              </div>
+              <div class="col-12">
+                <input type="email" class="form-control form-control-custom" id="contactEmail" placeholder="Email Address" required>
+              </div>
+              <div class="col-12">
+                <input type="tel" class="form-control form-control-custom" id="contactPhone" placeholder="Phone Number">
+              </div>
+              <div class="col-12">
+                <select class="form-control form-control-custom" id="contactSubject">
+                  <option value="">Select Subject</option>
+                  <option>General Enquiry</option>
+                  <option>Partnership Opportunity</option>
+                  <option>School Programme</option>
+                  <option>Donation Support</option>
+                  <option>Volunteer Interest</option>
+                  <option>Media/Press</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea rows="5" class="form-control form-control-custom" id="contactMessage" placeholder="Your Message..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-submit" id="contactSubmitBtn">
+                  <span class="btn-text"><i class="fas fa-paper-plane me-2"></i> Send Message</span>
+                  <span class="btn-spinner" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                </button>
+              </div>
+              <div id="contactFormFeedback" class="col-12 text-center mt-2"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 section-pop">
+        <div class="card-sage p-4 h-100" style="background: white;">
+          <h3 class="gold-text fw-bold mb-3"><i class="fas fa-map me-2"></i> Our Location</h3>
+          <div class="map-container mb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.456789012345!2d18.423456789012345!3d-33.923456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc675f8a8e2e6b%3A0x8e7e5e6e7e5e6e7e!2sCape%20Town%20City%20Centre!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-clock" style="color: var(--gold);"></i>
+                <small>Mon-Fri: 9:00 - 17:00</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fas fa-calendar-alt" style="color: var(--gold);"></i>
+                <small>Weekend: By Appointment</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-5 section-pop">
+      <h2 class="display-6 fw-bold gold-text">⚜️ Frequently Asked Questions</h2>
+      <hr class="gold-hr mx-auto">
+      <p class="lead">Find quick answers to common questions</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-item section-pop">
+          <div class="faq-question">
+            <span>What services does Mi Future Leaders provide?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We provide trauma-informed mental health education, 6-week Resilient Minds programmes, non-clinical emotional support, workshops, and referral pathways to clinical partners. We do not provide psychotherapy or clinical diagnosis.</p>
+          </div>
+        </div>
+        <div class="faq-item section-pop">
+          <div class="faq-question">
+            <span>How can my school partner with you?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Reach out via our contact form or email partnerships@mifutureleaders.org. We'll schedule a discovery call to understand your school's needs and tailor our programmes accordingly.</p>
+          </div>
+        </div>
+        <div class="faq-item section-pop">
+          <div class="faq-question">
+            <span>Do you offer counselling services?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We offer non-clinical emotional support and psychoeducation. For clinical therapy needs, we provide warm referrals to trusted clinical partners including psychologists and social workers.</p>
+          </div>
+        </div>
+        <div class="faq-item section-pop">
+          <div class="faq-question">
+            <span>How can I donate to support your work?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Click the DONATE button in the navigation bar. You can make a secure online donation via credit/debit card. Your contribution helps us reach more young people in underserved communities.</p>
+          </div>
+        </div>
+        <div class="faq-item section-pop">
+          <div class="faq-question">
+            <span>Do you work outside Cape Town and Johannesburg?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We work with partners across South Africa. Our programmes can be delivered virtually or through trained facilitators in various regions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- PREMIUM FOOTER -->
+<footer class="footer-premium">
+  <div class="footer-waves">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="#2D3A2B" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+  <div class="footer-main-content">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand-wrapper">
+            <div class="footer-logo-group">
+              <img src="images/logo.png" alt="Mi Future Leaders Logo" class="footer-logo-img" onerror="this.style.display='none'">
+              <div>
+                <div class="footer-brand-name">MI FUTURE</div>
+                <div class="footer-brand-accent">LEADERS</div>
+              </div>
+            </div>
+            <p class="footer-tagline">"Empowering young minds through trauma-informed mental health education."</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title"><i class="fas fa-compass"></i><span>Navigate</span></h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+              <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title"><i class="fas fa-address-card"></i><span>Connect</span></h4>
+            <ul class="footer-contact-list">
+              <li><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><div class="contact-details"><span class="contact-label">Email</span><a href="mailto:info@mifutureleaders.org">info@mifutureleaders.org</a></div></li>
+              <li><div class="contact-icon-circle"><i class="fas fa-phone-alt"></i></div><div class="contact-details"><span class="contact-label">Phone</span><a href="tel:+27825559900">+27 82 555 9900</a></div></li>
+              <li><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><span class="contact-label">Location</span><span>Cape Town | Johannesburg</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title"><i class="fas fa-star-of-life"></i><span>Stay Inspired</span></h4>
+            <p class="footer-newsletter-text">Join our community and receive uplifting stories & mental health resources.</p>
+            <form class="footer-newsletter-form" id="footerNewsletterForm">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              </div>
+              <div id="footerNewsletterMsg" class="newsletter-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-flex">
+        <div class="copyright"><i class="far fa-copyright"></i> 2026 Mi Future Leaders — Mental Health Education with Dignity</div>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a><span class="separator">•</span>
+          <a href="#">Terms of Service</a><span class="separator">•</span>
+          <a href="#">Ethical Framework</a>
+        </div>
+        <div class="back-to-top">
+          <button id="backToTopBtn" class="back-to-top-btn"><i class="fas fa-arrow-up"></i><span>Top</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function() {
+    // Loader
+    const loader = document.getElementById('uniqueLoader');
+    window.addEventListener('load', () => { setTimeout(() => loader.classList.add('hidden'), 500); initScrollReveal(); });
+    
+    // Navbar scroll
+    const nav = document.getElementById('royalNav');
+    window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
+    
+    // Scroll reveal
+    function initScrollReveal() {
+      const popElements = document.querySelectorAll('.section-pop');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.15 });
+      popElements.forEach(el => observer.observe(el));
+      popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); });
+    }
+    
+    // Back to top
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if(backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
+    
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if(!isActive) item.classList.add('active');
+      });
+    });
+    
+    // Contact Form Handler
+    const contactForm = document.getElementById('contactPageForm');
+    const submitBtn = document.getElementById('contactSubmitBtn');
+    const btnTextSpan = submitBtn.querySelector('.btn-text');
+    const btnSpinner = submitBtn.querySelector('.btn-spinner');
+    const feedbackDiv = document.getElementById('contactFormFeedback');
+    
+    if(contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        const firstName = document.getElementById('contactFirstName');
+        const lastName = document.getElementById('contactLastName');
+        const email = document.getElementById('contactEmail');
+        const message = document.getElementById('contactMessage');
+        let isValid = true;
+        
+        [firstName, lastName, email, message].forEach(field => {
+          if(!field.value.trim()) {
+            field.classList.add('error');
+            isValid = false;
+          } else {
+            field.classList.remove('error');
+          }
+        });
+        
+        if(email.value.trim() && !email.value.includes('@')) {
+          email.classList.add('error');
+          isValid = false;
+        }
+        
+        if(!isValid) {
+          feedbackDiv.innerHTML = '<span style="color:#dc3545;"><i class="fas fa-exclamation-triangle"></i> Please fill in all required fields.</span>';
+          setTimeout(() => feedbackDiv.innerHTML = '', 3000);
+          return;
+        }
+        
+        // Show loading
+        btnTextSpan.style.display = 'none';
+        btnSpinner.style.display = 'inline-block';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+          feedbackDiv.innerHTML = '<span style="color:#A07E2A;"><i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We\'ll respond within 24 hours.</span>';
+          contactForm.reset();
+          btnTextSpan.style.display = 'inline';
+          btnSpinner.style.display = 'none';
+          submitBtn.disabled = false;
+          
+          setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
+        }, 1500);
+      });
+      
+      // Remove error class on input
+      document.querySelectorAll('#contactPageForm input, #contactPageForm textarea, #contactPageForm select').forEach(field => {
+        field.addEventListener('input', function() { this.classList.remove('error'); });
+      });
+    }
+    
+    // Newsletter Form
+    const footerNewsletter = document.getElementById('footerNewsletterForm');
+    const newsletterMsg = document.getElementById('footerNewsletterMsg');
+    if(footerNewsletter) {
+      footerNewsletter.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        if(email && email.includes('@')) {
+          newsletterMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+          setTimeout(() => {
+            newsletterMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thanks for subscribing!';
+            emailInput.value = '';
+            setTimeout(() => newsletterMsg.innerHTML = '', 4000);
+          }, 1000);
+        } else {
+          newsletterMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Valid email required';
+          setTimeout(() => newsletterMsg.innerHTML = '', 3000);
+        }
+      });
+    }
+    
+    // External links loader
+    document.querySelectorAll('a').forEach(link => {
+      let href = link.getAttribute('href');
+      if(href && (href.includes('.html') || (href.startsWith('http') && !href.includes(location.hostname)))) {
+        link.addEventListener('click', () => { if(loader) loader.classList.remove('hidden'); });
+      }
+    });
+  })();
+</script>
+</body>
+</html>

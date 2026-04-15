@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Mi Future Leaders • Partners | Our Allies & Collaborators</title>
+  <!-- Bootstrap 5 core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Manrope', sans-serif; background-color: #FCFAF7; color: #2D3A2B; overflow-x: hidden; }
+    
+    /* ===== NAVBAR (matching homepage) ===== */
+    .navbar-royal { position: fixed; top: 0; left: 0; width: 100%; background: transparent; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); z-index: 1030; padding: 1rem 0; }
+    .navbar-royal.scrolled { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); border-bottom: 2px solid #C6A43F; padding: 0.5rem 0; }
+    .navbar-royal.scrolled .nav-link-gold { color: #3B4A35 !important; text-shadow: none; }
+    .navbar-royal.scrolled .brand-logo-text { background: linear-gradient(135deg, #A07E2A, #C6A43F); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-logo-img { height: 48px; width: auto; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); transition: all 0.3s ease; animation: logoGlowPulse 2s infinite alternate; }
+    @keyframes logoGlowPulse { 0% { filter: drop-shadow(0 0 2px #C6A43F) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); } 100% { filter: drop-shadow(0 0 12px #FFD966) drop-shadow(0 0 6px #FF69B4) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); } }
+    .brand-logo-text { font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 800; background: linear-gradient(135deg, #FFF8E7, #FFE5A3); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+    .nav-link-gold { color: white !important; font-weight: 600; margin: 0 12px; position: relative; font-family: 'Cinzel', serif; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); transition: 0.25s; }
+    .nav-link-gold::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2.5px; background: #C6A43F; transition: 0.3s ease; }
+    .nav-link-gold:hover::after { width: 100%; }
+    .nav-link-gold.active { color: #FFD966 !important; }
+    .btn-donate-gold { background: linear-gradient(145deg, #C6A43F, #A07E2A); border: none; padding: 8px 28px; border-radius: 60px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #2D3A2B !important; font-family: 'Cinzel', serif; transition: all 0.3s ease; box-shadow: 0 8px 18px -4px rgba(0,0,0,0.3); margin-left: 20px; }
+    .btn-donate-gold:hover { transform: translateY(-3px) scale(1.02); background: linear-gradient(145deg, #e6c35c, #C6A43F); }
+    .navbar-toggler { border: none; background: transparent; }
+    .navbar-toggler:focus { box-shadow: none; }
+    .navbar-toggler-icon { filter: invert(1); }
+    .navbar-royal.scrolled .navbar-toggler-icon { filter: invert(0); }
+    @media (max-width: 768px) { .nav-logo-img { height: 36px; } .brand-logo-text { font-size: 1.2rem; } .navbar-collapse { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); border-radius: 24px; padding: 20px; margin-top: 15px; } .btn-donate-gold { margin: 12px auto 0; display: inline-block; } }
+
+    /* ===== HERO SECTION ===== */
+    .partners-hero { position: relative; width: 100%; min-height: 45vh; background-image: url('images/steven-weeks-DUPFowqI6oI-unsplash.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .partners-hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 100%); z-index: 1; }
+    .partners-hero-content { position: relative; z-index: 2; padding: 6rem 2rem 3rem; }
+    .partners-hero-title { font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 800; color: white; text-shadow: 0 5px 25px rgba(0,0,0,0.5); }
+    .partners-hero-sub { color: rgba(255,255,240,0.9); font-size: 1.2rem; margin-top: 1rem; }
+    @media (max-width: 768px) { .partners-hero-title { font-size: 2.2rem; } }
+
+    /* ===== GLOBAL 3D STYLES ===== */
+    :root { --sage: #9CAF88; --sage-deep: #6B7F5E; --sage-soft: #E2E9DA; --gold: #C6A43F; --gold-dark: #A07E2A; }
+    .section-badge { display: inline-block; background: rgba(198, 164, 63, 0.12); border: 1px solid rgba(198, 164, 63, 0.4); border-radius: 60px; padding: 6px 20px; font-size: 0.75rem; letter-spacing: 2px; color: var(--gold-dark); font-weight: 600; backdrop-filter: blur(4px); }
+    .gold-divider { width: 80px; height: 4px; background: linear-gradient(90deg, var(--gold), transparent); border-radius: 4px; margin: 1rem auto; }
+    .gold-text { background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 70%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-pop { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .section-pop.visible { opacity: 1; transform: translateY(0); }
+    .global-loader-unique { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.98); backdrop-filter: blur(8px); z-index: 10000; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s; opacity: 1; visibility: visible; }
+    .global-loader-unique.hidden { opacity: 0; visibility: hidden; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Partner Category Cards */
+    .category-card-3d {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 1px solid rgba(198, 164, 63, 0.15);
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .category-card-3d::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(198, 164, 63, 0.08), transparent);
+      transition: 0.6s;
+    }
+    .category-card-3d:hover::before { left: 100%; }
+    .category-card-3d:hover {
+      transform: translateY(-12px);
+      border-color: var(--gold);
+      box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.2);
+    }
+    .category-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(145deg, rgba(198, 164, 63, 0.12), rgba(198, 164, 63, 0.05));
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+      font-size: 2.2rem;
+      color: var(--gold-dark);
+      transition: all 0.4s;
+    }
+    .category-card-3d:hover .category-icon {
+      transform: rotateY(10deg) scale(1.08);
+      background: linear-gradient(145deg, rgba(198, 164, 63, 0.25), rgba(198, 164, 63, 0.1));
+      color: var(--gold);
+    }
+    .category-count {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold-dark);
+      font-family: 'Cinzel', serif;
+      margin: 0.5rem 0;
+    }
+
+    /* Partner Logo Cards */
+    .partner-logo-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: 1px solid rgba(198, 164, 63, 0.15);
+      height: 100%;
+      cursor: pointer;
+    }
+    .partner-logo-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--gold);
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+    }
+    .logo-placeholder {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(145deg, var(--sage-soft), #f0f4ea);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 2.5rem;
+      color: var(--gold-dark);
+      transition: 0.3s;
+    }
+    .partner-logo-card:hover .logo-placeholder {
+      background: linear-gradient(145deg, var(--gold), var(--gold-dark));
+      color: white;
+      transform: scale(1.05);
+    }
+    .partner-name {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: #2D3A2B;
+    }
+    .partner-type {
+      font-size: 0.75rem;
+      color: var(--sage-deep);
+      letter-spacing: 1px;
+    }
+
+    /* Become Partner CTA */
+    .become-partner-card {
+      background: linear-gradient(145deg, var(--sage-soft), #f0f4ea);
+      border-radius: 48px;
+      padding: 3rem;
+      text-align: center;
+      transition: all 0.5s ease;
+      border: 1px solid rgba(198, 164, 63, 0.3);
+    }
+    .become-partner-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2);
+    }
+    .btn-become-partner {
+      background: linear-gradient(145deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 14px 42px;
+      border-radius: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2D3A2B;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .btn-become-partner:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(145deg, #e6c35c, #C6A43F);
+      box-shadow: 0 12px 22px -8px rgba(198, 164, 63, 0.4);
+      color: #1F2E1C;
+    }
+
+    /* Footer */
+    .footer-gold-unique { background: #F3F0E8; border-top: 6px solid var(--gold); }
+  </style>
+</head>
+<body>
+
+<div id="uniqueLoader" class="global-loader-unique">
+  <div style="font-size: 4rem; color: #C6A43F;"><i class="fas fa-crown"></i></div>
+  <div class="mt-4 fw-bold" style="font-family: 'Cinzel'; letter-spacing: 4px; color: #A07E2A;">MI FUTURE LEADERS</div>
+  <div style="width: 50px; height: 50px; border: 2px solid rgba(198,164,63,0.2); border-top: 2px solid #C6A43F; border-radius: 50%; animation: spin 1s linear infinite; margin-top: 20px;"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-royal" id="royalNav">
+  <div class="container">
+    <a class="navbar-brand" href="hoem.html">
+      <img src="images/logo.png" alt="Mi Future Leaders Logo" class="nav-logo-img">
+      
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#goldNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="goldNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="service.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold active" href="hoem.html">PARTNERS</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="d-flex">
+        <a href="#donate" class="btn btn-donate-gold" id="donateNavBtn"><i class="fas fa-heart me-2"></i> DONATE</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="partners-hero">
+  <div class="partners-hero-overlay"></div>
+  <div class="partners-hero-content">
+    <h1 class="partners-hero-title">Our Partners & Allies</h1>
+    <p class="partners-hero-sub">Together we build resilient futures for young leaders across South Africa</p>
+  </div>
+</section>
+
+<main>
+  <!-- DISCLAIMER -->
+  <div class="container my-5">
+    <div class="card-3d p-4 text-center section-pop" style="background: linear-gradient(135deg, rgba(156, 175, 136, 0.08), rgba(198, 164, 63, 0.05)); border-radius: 80px 20px 80px 20px; border: 1px solid rgba(198,164,63,0.3);">
+      <i class="bi bi-shield-fill-check fs-2" style="color: var(--gold);"></i>
+      <span class="fs-5 fw-semibold ms-2">Mi Future Leaders provides mental health education and early support only — no psychotherapy or clinical diagnosis.</span>
+    </div>
+  </div>
+
+  <!-- PARTNER CATEGORIES -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-5 section-pop">
+      <div class="section-badge mx-auto">⚜️ OUR ECOSYSTEM ⚜️</div>
+      <h2 class="display-5 fw-bold gold-text mt-3">Partner Categories</h2>
+      <div class="gold-divider mx-auto"></div>
+      <p class="lead text-muted">Diverse collaborators united by a shared mission</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-school"></i></div><h3>Schools</h3><div class="category-count">50+</div><p>Partner schools across Western Cape, Gauteng & KZN</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>NGOs</h3><div class="category-count">25+</div><p>Child & youth-focused organizations</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-building"></i></div><h3>Corporate CSI</h3><div class="category-count">15+</div><p>Impact-driven corporate partners</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-chalkboard"></i></div><h3>Educators</h3><div class="category-count">400+</div><p>Teachers & youth workers trained</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-users"></i></div><h3>Community Orgs</h3><div class="category-count">30+</div><p>Local community-based organizations</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-heartbeat"></i></div><h3>Clinical Partners</h3><div class="category-count">20+</div><p>Psychologists & social workers for referrals</p></div></div>
+    </div>
+  </div>
+
+  <!-- FEATURED PARTNERS -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-5 section-pop">
+      <div class="section-badge mx-auto">⚜️ OUR ALLIES ⚜️</div>
+      <h2 class="display-5 fw-bold gold-text mt-3">Featured Partners</h2>
+      <div class="gold-divider mx-auto"></div>
+      <p class="lead text-muted">Trusted collaborators making a difference</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-university"></i></div><div class="partner-name">Western Cape DOE</div><div class="partner-type">Government Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-hand-holding-usd"></i></div><div class="partner-name">The DGMT Trust</div><div class="partner-type">Funding Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-church"></i></div><div class="partner-name">Soul City Institute</div><div class="partner-type">NGO Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-briefcase"></i></div><div class="partner-name">Old Mutual</div><div class="partner-type">Corporate Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-graduation-cap"></i></div><div class="partner-name">UCT</div><div class="partner-type">Academic Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-heart"></i></div><div class="partner-name">SADAG</div><div class="partner-type">Clinical Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-globe"></i></div><div class="partner-name">UNICEF SA</div><div class="partner-type">International Partner</div></div></div>
+      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-tree"></i></div><div class="partner-name">WWF SA</div><div class="partner-type">Community Partner</div></div></div>
+    </div>
+  </div>
+
+  <!-- IMPACT STATS -->
+  <div class="container my-5 py-3">
+    <div class="row g-4 text-center">
+      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">3,200+</div><div class="stats-label">Youth Reached</div></div></div>
+      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">400+</div><div class="stats-label">Educators Trained</div></div></div>
+      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">50+</div><div class="stats-label">Schools</div></div></div>
+      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">6</div><div class="stats-label">Provinces</div></div></div>
+    </div>
+  </div>
+
+  <!-- BECOME A PARTNER CTA -->
+  <div class="container my-5 py-5">
+    <div class="become-partner-card section-pop text-center">
+      <i class="fas fa-handshake fs-1" style="color: var(--gold-dark); margin-bottom: 1rem;"></i>
+      <h2 class="display-5 fw-bold gold-text">Become a Partner</h2>
+      <div class="gold-divider mx-auto"></div>
+      <p class="fs-5" style="max-width: 700px; margin: 1rem auto;">Join us in creating sustainable mental health education for every young leader. Whether you're a school, NGO, corporate, or foundation — let's work together.</p>
+      <div class="mt-4">
+        <a href="contact.html" class="btn-become-partner"><i class="fas fa-arrow-right"></i> Partner With Us</a>
+      </div>
+      <div class="mt-4">
+        <small class="text-muted"><i class="fas fa-envelope me-1"></i> partnerships@mifutureleaders.org | <i class="fas fa-phone-alt me-1"></i> +27 82 555 9900</small>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-gold-unique pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <span style="font-family:'Cinzel'; font-size:2rem; color:var(--gold-dark);">✦ MiFL</span>
+        <p class="small mt-3">Mental health education with dignity. No diagnostic services.</p>
+        <p class="small">© 2026 Mi Future Leaders</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold gold-text">NAVIGATE</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+          <li><a href="about.html" class="text-decoration-none text-dark">About</a></li>
+          <li><a href="service.html" class="text-decoration-none text-dark">Services</a></li>
+          <li><a href="hoem.html" class="text-decoration-none text-dark">Partners</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold gold-text">OUR COMMITMENT</h6>
+        <p class="small">Trauma-informed, strengths-based, ethical boundaries.</p>
+        <p class="small mt-2"><i class="fas fa-phone-alt me-2"></i>082 303 6050</p>
+        <p class="small"><i class="fas fa-envelope me-2"></i>info@mifutureleaders.org</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function() {
+    const loader = document.getElementById('uniqueLoader');
+    window.addEventListener('load', () => { setTimeout(() => loader.classList.add('hidden'), 500); initScrollReveal(); attachNavScroll(); });
+    
+    function attachNavScroll() {
+      const nav = document.getElementById('royalNav');
+      window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
+    }
+    
+    function initScrollReveal() {
+      const popElements = document.querySelectorAll('.section-pop');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.15 });
+      popElements.forEach(el => observer.observe(el));
+      popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); });
+    }
+    
+    // Stats cards animation
+    const statsNumbers = document.querySelectorAll('.stats-number');
+    statsNumbers.forEach(el => {
+      const originalText = el.innerText;
+      el.setAttribute('data-target', originalText.replace(/[^0-9]/g, ''));
+      el.innerText = '0';
+    });
+    
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target'));
+          let current = 0;
+          const increment = target / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if(current >= target) {
+              el.innerText = target.toLocaleString() + (el.innerText.includes('+') ? '+' : '');
+              clearInterval(timer);
+            } else {
+              el.innerText = Math.floor(current).toLocaleString() + (el.innerText.includes('+') ? '+' : '');
+            }
+          }, 30);
+          statsObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('.stats-number').forEach(el => statsObserver.observe(el));
+  })();
+</script>
+</body>
+</html>

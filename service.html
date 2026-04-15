@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Mi Future Leaders • Services | Cinematic Gold & Dignity</title>
+  <!-- Bootstrap 5 core -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #FCFAF7;
+      color: #2D3A2B;
+      overflow-x: hidden;
+    }
+    
+    /* ===== ROYAL NAVBAR (SAME AS HOMEPAGE) ===== */
+    .navbar-royal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      z-index: 1030;
+      padding: 1rem 0;
+    }
+    .navbar-royal.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid #C6A43F;
+      padding: 0.5rem 0;
+    }
+    .navbar-royal.scrolled .nav-link-gold {
+      color: #3B4A35 !important;
+      text-shadow: none;
+    }
+    .navbar-royal.scrolled .brand-logo-text {
+      background: linear-gradient(135deg, #A07E2A, #C6A43F);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      transition: all 0.3s ease;
+      animation: logoGlowPulse 2s infinite alternate;
+    }
+    @keyframes logoGlowPulse {
+      0% { filter: drop-shadow(0 0 2px #C6A43F) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); }
+      100% { filter: drop-shadow(0 0 12px #FFD966) drop-shadow(0 0 6px #FF69B4) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); }
+    }
+    .brand-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFF8E7, #FFE5A3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    .nav-link-gold {
+      color: white !important;
+      font-weight: 600;
+      margin: 0 12px;
+      position: relative;
+      font-family: 'Cinzel', serif;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      transition: 0.25s;
+    }
+    .nav-link-gold::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: #C6A43F;
+      transition: 0.3s ease;
+    }
+    .nav-link-gold:hover::after { width: 100%; }
+    .nav-link-gold.active { color: #FFD966 !important; }
+    .nav-link-gold.active::after { width: 100%; background: #FFD966; }
+    @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.3rem; }
+      .navbar-royal.scrolled .collapse.show { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); border-radius: 20px; padding: 15px; margin-top: 10px; }
+      .navbar-royal.scrolled .collapse.show .nav-link-gold { color: #3B4A35 !important; }
+    }
+
+       /* DONATE BUTTON */
+    .btn-donate-gold {
+      background: linear-gradient(145deg, #C6A43F, #A07E2A);
+      border: none;
+      padding: 8px 28px;
+      border-radius: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2D3A2B !important;
+      font-family: 'Cinzel', serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 18px -4px rgba(0,0,0,0.3);
+      margin-left: 20px;
+    }
+
+     .btn-donate-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: linear-gradient(145deg, #e6c35c, #C6A43F);
+      box-shadow: 0 14px 22px -8px rgba(0,0,0,0.4);
+      color: #1F2E1C !important;
+    }
+
+    
+    @media (max-width: 992px) {
+      .navbar-royal { padding: 0.8rem 0; }
+      .nav-logo-img { height: 42px; }
+      .brand-logo-text { font-size: 1.5rem; }
+      .nav-link-gold { margin: 0 6px; font-size: 0.9rem; }
+      .btn-donate-gold { padding: 6px 20px; font-size: 0.8rem; margin-left: 10px; }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-logo-img { height: 36px; }
+      .brand-logo-text { font-size: 1.2rem; }
+      .navbar-collapse {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 20px;
+        margin-top: 15px;
+      }
+      .navbar-royal.scrolled .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+      }
+      .navbar-royal.scrolled .navbar-collapse .nav-link-gold {
+        color: #3B4A35 !important;
+      }
+      .nav-link-gold {
+        text-align: center;
+        margin: 8px 0;
+      }
+      .btn-donate-gold {
+        display: inline-block;
+        margin: 12px auto 0;
+        width: fit-content;
+      }
+      .ms-auto.d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ===== CINEMATIC HERO SECTION FOR SERVICES PAGE ===== */
+    .services-hero {
+      position: relative;
+      width: 100%;
+      min-height: 65vh;
+      background-image: url('images/aaron-burden-6jYoil2GhVk-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 0;
+    }
+    .services-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 1;
+    }
+    .services-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 8rem 2rem 5rem;
+    }
+    .services-hero-badge {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+      padding: 10px 28px;
+      border-radius: 60px;
+      border: 1px solid rgba(198, 164, 63, 0.8);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #FFE5A3;
+      margin-bottom: 1.5rem;
+      animation: badgeFloat 3s infinite ease-in-out;
+    }
+    @keyframes badgeFloat {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); box-shadow: 0 18px 28px -8px rgba(198,164,63,0.4); }
+      100% { transform: translateY(0px); }
+    }
+    .services-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+      margin-bottom: 1rem;
+    }
+    .services-hero-sub {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 240, 0.95);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .services-hero-title { font-size: 2.5rem; }
+      .services-hero-sub { font-size: 1rem; }
+      .services-hero { min-height: 50vh; background-attachment: scroll; }
+    }
+
+    /* ===== GLOBAL STYLES (MATCH HOMEPAGE) ===== */
+    :root {
+      --sage: #9CAF88;
+      --sage-deep: #6B7F5E;
+      --sage-soft: #E2E9DA;
+      --gold: #C6A43F;
+      --gold-dark: #A07E2A;
+    }
+    .card-sage {
+      background: var(--sage-soft);
+      border: 1px solid rgba(198, 164, 63, 0.5);
+      border-radius: 32px 12px 32px 12px;
+      transition: all 0.4s ease;
+    }
+    .card-sage:hover { transform: translateY(-8px); border-color: var(--gold); }
+    .gold-text {
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-sage-solid {
+      background: var(--sage-deep);
+      border-radius: 60px;
+      padding: 14px 38px;
+      font-weight: 700;
+      border: none;
+      transition: 0.2s;
+    }
+    .btn-sage-solid:hover { background: var(--gold); color: #2C2C2A; transform: translateY(-2px); }
+    .icon-gold-circle {
+      width: 80px;
+      height: 80px;
+      background: rgba(198, 164, 63, 0.12);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    hr.gold-hr {
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--sage-soft), transparent);
+      width: 120px;
+      margin: 1rem auto;
+      border: none;
+    }
+    .section-pop {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .section-pop.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .global-loader-unique {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.5s;
+      opacity: 1;
+      visibility: visible;
+    }
+    .global-loader-unique.hidden { opacity: 0; visibility: hidden; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== SERVICE CARDS (ENHANCED) ===== */
+    .service-card-premium {
+      background: white;
+      border-radius: 28px;
+      padding: 2.2rem;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+      border: 1px solid rgba(198,164,63,0.2);
+    }
+    .service-card-premium:hover {
+      transform: translateY(-12px);
+      border-color: var(--gold);
+      box-shadow: 0 35px 50px -20px rgba(0,0,0,0.2);
+    }
+    .service-icon-gold {
+      width: 85px;
+      height: 85px;
+      background: linear-gradient(145deg, rgba(198,164,63,0.15), rgba(198,164,63,0.05));
+      border-radius: 30px 8px 30px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      color: var(--gold-dark);
+      margin-bottom: 1.5rem;
+      transition: 0.3s;
+    }
+    .service-card-premium:hover .service-icon-gold {
+      transform: rotateY(8deg) scale(1.05);
+      background: linear-gradient(145deg, rgba(198,164,63,0.25), rgba(198,164,63,0.1));
+      color: var(--gold);
+    }
+    .service-feature-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1.2rem;
+    }
+    .service-feature-list li {
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px dashed rgba(198,164,63,0.2);
+    }
+    .service-feature-list li i {
+      color: var(--gold);
+      width: 24px;
+    }
+
+ .footer-premium {
+    background: linear-gradient(135deg, #1F2E1C 0%, #2D3A2B 50%, #1F2E1C 100%);
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .footer-waves {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .footer-waves svg {
+    width: 100%;
+    height: 70px;
+  }
+
+  .footer-main-content {
+    padding: 60px 0 40px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Brand Section */
+  .footer-brand-wrapper {
+    position: relative;
+  }
+
+  .footer-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .footer-logo-img:hover {
+    transform: scale(1.05);
+  }
+
+  .footer-brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #E8D5A3;
+    line-height: 1.2;
+  }
+
+  .footer-brand-accent {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #C6A43F, #FFD966);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+  }
+
+  .footer-tagline {
+    color: #C8D5B5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 15px 0;
+    font-style: italic;
+    border-left: 3px solid #C6A43F;
+    padding-left: 16px;
+  }
+
+  .footer-mission-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(198, 164, 63, 0.15);
+    border: 1px solid rgba(198, 164, 63, 0.4);
+    border-radius: 60px;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #FFE5A3;
+    backdrop-filter: blur(4px);
+    margin-top: 10px;
+  }
+
+  .footer-mission-badge i {
+    color: #C6A43F;
+    font-size: 0.9rem;
+  }
+
+  /* Section Titles */
+  .footer-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFE5A3;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .footer-section-title i {
+    color: #C6A43F;
+    font-size: 1.1rem;
+  }
+
+  .footer-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #C6A43F, transparent);
+    border-radius: 3px;
+  }
+
+  /* Links Styling */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    color: #C8D5B5;
+    text-decoration: none;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .footer-links a i {
+    font-size: 0.7rem;
+    color: #C6A43F;
+    transition: transform 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: #FFD966;
+    transform: translateX(6px);
+  }
+
+  .footer-links a:hover i {
+    transform: translateX(3px);
+  }
+
+  /* Contact List */
+  .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-icon-circle {
+    width: 38px;
+    height: 38px;
+    background: rgba(198, 164, 63, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+
+  .contact-icon-circle i {
+    color: #C6A43F;
+    font-size: 1rem;
+  }
+
+  .footer-contact-list li:hover .contact-icon-circle {
+    background: #C6A43F;
+    transform: scale(1.1);
+  }
+
+  .footer-contact-list li:hover .contact-icon-circle i {
+    color: #1F2E1C;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9CAF88;
+  }
+
+  .contact-details a,
+  .contact-details span {
+    color: #E8D5A3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .contact-details a:hover {
+    color: #FFD966;
+  }
+
+  /* Newsletter Form */
+  .footer-newsletter-text {
+    color: #C8D5B5;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .newsletter-input-group {
+    display: flex;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 60px;
+    border: 1px solid rgba(198, 164, 63, 0.4);
+    transition: all 0.3s;
+  }
+
+  .newsletter-input-group:focus-within {
+    border-color: #C6A43F;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(198, 164, 63, 0.2);
+  }
+
+  .newsletter-input-group input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 18px;
+    color: white;
+    font-size: 0.85rem;
+    outline: none;
+  }
+
+  .newsletter-input-group input::placeholder {
+    color: #9CAF88;
+  }
+
+  .newsletter-input-group button {
+    background: linear-gradient(135deg, #C6A43F, #A07E2A);
+    border: none;
+    border-radius: 60px;
+    width: 46px;
+    height: 46px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #1F2E1C;
+  }
+
+  .newsletter-input-group button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #FFD966, #C6A43F);
+  }
+
+  .newsletter-feedback {
+    font-size: 0.7rem;
+    margin-top: 8px;
+    color: #FFD966;
+    text-align: center;
+  }
+
+  /* Social Icons */
+  .footer-social-section {
+    margin-top: 24px;
+  }
+
+  .social-label {
+    font-size: 0.75rem;
+    color: #9CAF88;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .social-icons-wrapper {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(198, 164, 63, 0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C6A43F;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+  }
+
+  .social-icon:hover {
+    background: #C6A43F;
+    color: #1F2E1C;
+    transform: translateY(-4px) rotate(360deg);
+    box-shadow: 0 5px 15px rgba(198, 164, 63, 0.4);
+  }
+
+  /* Bottom Bar */
+  .footer-bottom {
+    border-top: 1px solid rgba(198, 164, 63, 0.25);
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .copyright {
+    color: #9CAF88;
+    font-size: 0.8rem;
+  }
+
+  .copyright i {
+    margin-right: 4px;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .legal-links a {
+    color: #C8D5B5;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+  }
+
+  .legal-links a:hover {
+    color: #FFD966;
+  }
+
+  .separator {
+    color: #C6A43F;
+    font-size: 0.7rem;
+  }
+
+  .back-to-top-btn {
+    background: linear-gradient(135deg, #C6A43F, #A07E2A);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 40px;
+    color: #1F2E1C;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .back-to-top-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(198, 164, 63, 0.4);
+    background: linear-gradient(135deg, #FFD966, #C6A43F);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .footer-bottom-flex {
+      flex-direction: column;
+      text-align: center;
+    }
+    .legal-links {
+      justify-content: center;
+    }
+    .footer-waves svg {
+      height: 50px;
+    }
+    .footer-waves {
+      top: -45px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-main-content {
+      padding: 40px 0 30px;
+    }
+    .footer-logo-group {
+      justify-content: center;
+    }
+    .footer-brand-text {
+      text-align: center;
+    }
+    .footer-tagline {
+      text-align: center;
+    }
+    .footer-mission-badge {
+      margin: 10px auto;
+      display: flex;
+      width: fit-content;
+    }
+    .footer-section-title {
+      justify-content: center;
+    }
+    .footer-section-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+    }
+    .footer-links li a {
+      justify-content: center;
+    }
+    .footer-contact-list li {
+      justify-content: center;
+    }
+    .footer-newsletter-text {
+      text-align: center;
+    }
+    .social-icons-wrapper {
+      justify-content: center;
+    }
+  }
+
+   /* Donation Modal Styles */
+  .donation-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
+  }
+
+  .donation-modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .donation-modal-container {
+    background: linear-gradient(145deg, #FFFFFF 0%, #FCFAF7 100%);
+    width: 90%;
+    max-width: 520px;
+    border-radius: 32px;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(198, 164, 63, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .donation-modal-overlay.active .donation-modal-container {
+    transform: scale(1);
+  }
+
+  .donation-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #2D3A2B;
+    z-index: 10;
+  }
+
+  .donation-modal-close:hover {
+    background: rgba(198, 164, 63, 0.2);
+    transform: rotate(90deg);
+  }
+
+  .donation-modal-header {
+    text-align: center;
+    padding: 32px 32px 16px 32px;
+    border-bottom: 2px solid rgba(198, 164, 63, 0.2);
+  }
+
+  .donation-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(145deg, #C6A43F, #A07E2A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 8px 20px rgba(198, 164, 63, 0.3);
+  }
+
+  .donation-icon-wrapper i {
+    font-size: 32px;
+    color: white;
+  }
+
+  .donation-modal-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #A07E2A, #C6A43F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .donation-modal-header p {
+    color: #6B7F5E;
+    font-size: 0.9rem;
+  }
+
+  .donation-form {
+    padding: 24px 32px 32px 32px;
+  }
+
+  .form-group-full {
+    margin-bottom: 20px;
+  }
+
+  .form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: #2D3A2B;
+    letter-spacing: 0.5px;
+  }
+
+  .form-label i {
+    color: #C6A43F;
+    margin-right: 6px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #E0D6C5;
+    border-radius: 14px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background: white;
+    font-family: 'Manrope', monospace;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #C6A43F;
+    box-shadow: 0 0 0 3px rgba(198, 164, 63, 0.2);
+  }
+
+  .form-input.error {
+    border-color: #dc3545;
+    background: #fff8f8;
+  }
+
+  .card-input-wrapper {
+    position: relative;
+  }
+
+  .card-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+  }
+
+  /* Amount Buttons */
+  .amount-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .amount-btn {
+    background: #F3F0E8;
+    border: 2px solid transparent;
+    padding: 10px 0;
+    border-radius: 40px;
+    font-weight: 700;
+    color: #2D3A2B;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Cinzel', serif;
+  }
+
+  .amount-btn:hover {
+    background: #E2E9DA;
+    transform: translateY(-2px);
+  }
+
+  .amount-btn.active {
+    background: linear-gradient(145deg, #C6A43F, #A07E2A);
+    color: white;
+    border-color: #FFD966;
+    box-shadow: 0 4px 12px rgba(198, 164, 63, 0.3);
+  }
+
+  .custom-amount-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .currency-sign {
+    position: absolute;
+    left: 16px;
+    font-weight: 700;
+    color: #A07E2A;
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+
+  .custom-amount-input {
+    width: 100%;
+    padding: 12px 16px 12px 36px;
+    border: 1.5px solid #E0D6C5;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .custom-amount-input:focus {
+    outline: none;
+    border-color: #C6A43F;
+  }
+
+  .cvv-tooltip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #9CAF88;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: help;
+    margin-left: 6px;
+    position: relative;
+  }
+
+  .cvv-tooltip:hover::after {
+    content: "3-digit on back of card";
+    position: absolute;
+    bottom: 28px;
+    left: -30px;
+    background: #2D3A2B;
+    color: white;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    z-index: 20;
+    font-weight: normal;
+  }
+
+  .error-message {
+    font-size: 0.75rem;
+    color: #dc3545;
+    margin-top: 5px;
+    min-height: 20px;
+  }
+
+  .donation-submit-btn {
+    width: 100%;
+    background: linear-gradient(145deg, #C6A43F, #A07E2A);
+    border: none;
+    padding: 14px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .donation-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(198, 164, 63, 0.3);
+  }
+
+  .donation-submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .security-notice {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #9CAF88;
+  }
+
+  .security-notice i {
+    margin-right: 6px;
+    color: #C6A43F;
+  }
+
+  /* Success State */
+  .donation-success {
+    text-align: center;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donation-success i {
+    font-size: 70px;
+    color: #C6A43F;
+    margin-bottom: 20px;
+  }
+
+  .donation-success h3 {
+    font-family: 'Cinzel', serif;
+    color: #2D3A2B;
+    margin-bottom: 12px;
+  }
+
+  .donation-success p {
+    color: #6B7F5E;
+    margin-bottom: 24px;
+  }
+
+  .success-close-btn {
+    background: transparent;
+    border: 2px solid #C6A43F;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #A07E2A;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .success-close-btn:hover {
+    background: #C6A43F;
+    color: white;
+  }
+
+  /* Scrollbar */
+  .donation-modal-container::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .donation-modal-container::-webkit-scrollbar-track {
+    background: #F3F0E8;
+    border-radius: 10px;
+  }
+
+  .donation-modal-container::-webkit-scrollbar-thumb {
+    background: #C6A43F;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 480px) {
+    .donation-modal-container {
+      width: 95%;
+    }
+    .donation-form {
+      padding: 20px;
+    }
+    .amount-buttons {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .form-row-2 {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .donation-modal-header h2 {
+      font-size: 1.4rem;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<div id="uniqueLoader" class="global-loader-unique">
+  <div style="font-size: 4rem; color: #C6A43F;"><i class="fas fa-crown"></i></div>
+  <div class="mt-4 fw-bold" style="font-family: 'Cinzel'; letter-spacing: 4px; color: #A07E2A;">MI FUTURE LEADERS</div>
+  <div style="width: 50px; height: 50px; border: 2px solid rgba(198,164,63,0.2); border-top: 2px solid #C6A43F; border-radius: 50%; animation: spin 1s linear infinite; margin-top: 20px;"></div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-royal" id="royalNav">
+  <div class="container">
+    <a class="navbar-brand" href="about.html">
+      <img src="images/logo.png" alt="Mi Future Leaders Logo" class="nav-logo-img">
+      
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#goldNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="goldNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="about.html">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold active" href="service.html">SERVICES</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="hoem.html">PARTNERS</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-gold" href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="d-flex">
+        <a href="#donate" class="btn btn-donate-gold"><i class="fas fa-heart me-2"></i> DONATE</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- CINEMATIC HERO FOR SERVICES PAGE (MATCHING HOME STYLE) -->
+<section class="services-hero">
+  <div class="services-hero-overlay"></div>
+  <div class="services-hero-content">
+    <div class="services-hero-badge">⚜️ PREVENTION · EDUCATION · EARLY SUPPORT ⚜️</div>
+    <h1 class="services-hero-title">Our Sacred Services</h1>
+    <p class="services-hero-sub">Trauma-informed · Strengths-based · Non-clinical — always with dignity.</p>
+  </div>
+</section>
+
+<main>
+  <!-- disclaimer (same as homepage) -->
+  <div class="container my-5">
+    <div class="card-sage p-4 text-center section-pop" style="background: rgba(156, 175, 136, 0.1); border-radius: 60px 16px 60px 16px;">
+      <i class="bi bi-shield-fill-check fs-2" style="color: var(--gold);"></i>
+      <span class="fs-5 fw-semibold ms-2">Mi Future Leaders provides mental health education and early support only — no psychotherapy or clinical diagnosis.</span>
+    </div>
+  </div>
+
+  <!-- FLAGSHIP SERVICE: RESILIENT MINDS (HIGHLIGHT) -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 section-pop">
+        <div class="card-sage p-5 text-center" style="background: linear-gradient(145deg, #ffffff, #fef9ef); border-left: 8px solid var(--gold);">
+          <i class="fas fa-crown fs-1" style="color: var(--gold);"></i>
+          <h2 class="display-5 gold-text fw-bold mt-3">✦ Resilient Minds ✦</h2>
+          <p class="fs-4 fw-light">6‑Week Flagship Group Programme</p>
+          <p class="lead">Emotional literacy, boundaries, identity & coping skills — delivered in schools and community hubs.</p>
+          <div class="row mt-4 text-start">
+            <div class="col-md-6"><i class="fas fa-check-circle me-2" style="color:var(--gold);"></i> Understanding emotions & stress</div>
+            <div class="col-md-6"><i class="fas fa-check-circle me-2" style="color:var(--gold);"></i> Healthy coping & regulation</div>
+            <div class="col-md-6"><i class="fas fa-check-circle me-2" style="color:var(--gold);"></i> Relationships, boundaries & peer influence</div>
+            <div class="col-md-6"><i class="fas fa-check-circle me-2" style="color:var(--gold);"></i> Strengths, identity & resilience</div>
+          </div>
+          <div class="mt-4"><span class="badge-3d" style="background: var(--gold-dark); color: white;">TRAUMA-INFORMED · STRENGTHS-BASED</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE GRID (6 CARDS) -->
+  <div class="container my-5 py-4">
+    <div class="text-center mb-5 section-pop">
+      <h2 class="display-5 fw-bold gold-text">⚜️ Complete Service Spectrum</h2>
+      <hr class="gold-hr">
+      <p class="lead">Holistic, non-clinical support for adolescents, educators & communities</p>
+    </div>
+    <div class="row g-5">
+      <!-- Service 1: Early Emotional Support -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3 class="h3 gold-text">Early Emotional Support</h3>
+          <p>Non‑diagnostic listening circles, psychoeducation and guided referrals to clinical partners when needed.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Emotional support: stress, grief, adjustment</li>
+            <li><i class="fas fa-circle-check"></i> Coping skills development</li>
+            <li><i class="fas fa-circle-check"></i> Psychoeducation & emotional regulation</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Service 2: Workshops & Training -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-chalkboard-user"></i></div>
+          <h3 class="h3 gold-text">Workshops & Training</h3>
+          <p>Mental health awareness, resilience facilitation for educators and youth workers.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Mental health awareness sessions</li>
+            <li><i class="fas fa-circle-check"></i> Stress management workshops</li>
+            <li><i class="fas fa-circle-check"></i> Trauma-informed facilitation training</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Service 3: Capacity Building -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-users"></i></div>
+          <h3 class="h3 gold-text">Capacity Building</h3>
+          <p>Empowering organisations to embed mental health awareness into their programmes.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Identifying emotional distress</li>
+            <li><i class="fas fa-circle-check"></i> Referral pathway guidance</li>
+            <li><i class="fas fa-circle-check"></i> Programme adaptation support</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Service 4: Monitoring & Evaluation -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-chart-line"></i></div>
+          <h3 class="h3 gold-text">Monitoring & Evaluation</h3>
+          <p>Data-driven insights to track impact and improve programme delivery.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Attendance tracking</li>
+            <li><i class="fas fa-circle-check"></i> Pre- & post-reflection tools</li>
+            <li><i class="fas fa-circle-check"></i> Summary reports for partners</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Service 5: Adaptation & Consult -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-arrows-spin"></i></div>
+          <h3 class="h3 gold-text">Adaptation & Consult</h3>
+          <p>Embedding trauma‑informed practice into existing youth programmes.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Curriculum adaptation</li>
+            <li><i class="fas fa-circle-check"></i> Staff training & mentoring</li>
+            <li><i class="fas fa-circle-check"></i> Ethical safeguarding frameworks</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Service 6: Referral Pathways -->
+      <div class="col-md-6 col-lg-4 section-pop">
+        <div class="service-card-premium">
+          <div class="service-icon-gold"><i class="fas fa-arrow-right-to-bracket"></i></div>
+          <h3 class="h3 gold-text">Referral Pathways</h3>
+          <p>Warm connections to trusted clinical partners for specialised care.</p>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-circle-check"></i> Psychologist partnerships</li>
+            <li><i class="fas fa-circle-check"></i> Social work linkages</li>
+            <li><i class="fas fa-circle-check"></i> Community health resources</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ETHICAL MANDATE SECTION (BEAUTIFUL DISCLAIMER) -->
+  <div class="container my-5 py-4">
+    <div class="card-sage p-5 text-center section-pop" style="background: white; border-radius: 60px 20px 60px 20px; border: 2px solid rgba(198,164,63,0.3);">
+      <i class="fas fa-shield-heart fs-1" style="color: var(--gold);"></i>
+      <h3 class="display-6 gold-text mt-3">⚜️ Our Ethical Mandate</h3>
+      <p class="fs-4 fw-light">Mi Future Leaders provides mental health education and early support services only.<br>We do not offer psychotherapy, psychological diagnosis, or clinical treatment.</p>
+      <hr class="gold-hr">
+      <p class="lead">Prevention, emotional skills development, structured support — always trauma‑informed, non‑clinical, with clear referral pathways.</p>
+      <div class="mt-4">
+        <span class="badge-3d" style="background: var(--sage-deep); color: white; animation: none;">✧ DIGNITY FIRST ✧</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="donation-modal-overlay" id="donationModal">
+  <div class="donation-modal-container">
+    <button class="donation-modal-close" id="closeDonationModal">&times;</button>
+    
+    <div class="donation-modal-header">
+      <div class="donation-icon-wrapper">
+        <i class="fas fa-heart"></i>
+      </div>
+      <h2>Make a Donation</h2>
+      <p>Your generosity empowers young leaders</p>
+    </div>
+
+    <form id="donationForm" class="donation-form">
+      <!-- Amount Selection -->
+      <div class="form-group-full">
+        <label class="form-label">Select or enter amount</label>
+        <div class="amount-buttons">
+          <button type="button" class="amount-btn" data-amount="100">R100</button>
+          <button type="button" class="amount-btn" data-amount="250">R250</button>
+          <button type="button" class="amount-btn" data-amount="500">R500</button>
+          <button type="button" class="amount-btn" data-amount="1000">R1000</button>
+        </div>
+        <div class="custom-amount-wrapper">
+          <span class="currency-sign">R</span>
+          <input type="number" id="customAmount" class="custom-amount-input" placeholder="Custom amount" min="10" step="10">
+        </div>
+        <div id="amountError" class="error-message"></div>
+      </div>
+
+      <!-- Card Number -->
+      <div class="form-group-full">
+        <label class="form-label">
+          <i class="far fa-credit-card"></i> Card Number
+        </label>
+        <div class="card-input-wrapper">
+          <input type="text" id="cardNumber" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="off">
+          <span class="card-icon" id="cardIcon"></span>
+        </div>
+        <div id="cardError" class="error-message"></div>
+      </div>
+
+      <!-- Expiry & CVV Row -->
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label">Expiry Date</label>
+          <input type="text" id="expiryDate" class="form-input" placeholder="MM/YY" maxlength="5" autocomplete="off">
+          <div id="expiryError" class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">
+            CVV
+            <span class="cvv-tooltip" id="cvvTooltip">?</span>
+          </label>
+          <input type="password" id="cvv" class="form-input" placeholder="123" maxlength="4" autocomplete="off">
+          <div id="cvvError" class="error-message"></div>
+        </div>
+      </div>
+
+      <!-- Cardholder Name -->
+      <div class="form-group-full">
+        <label class="form-label">Cardholder Name</label>
+        <input type="text" id="cardholderName" class="form-input" placeholder="As shown on card" autocomplete="off">
+        <div id="nameError" class="error-message"></div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="donation-submit-btn" id="donationSubmitBtn">
+        <span class="btn-text">Donate Now</span>
+        <span class="btn-loader" style="display: none;"><i class="fas fa-spinner fa-spin"></i></span>
+      </button>
+
+      <!-- Security Notice -->
+      <div class="security-notice">
+        <i class="fas fa-lock"></i>
+        <span>Secure payment • 256-bit encryption</span>
+      </div>
+    </form>
+
+    <!-- Success Message (hidden initially) -->
+    <div id="donationSuccess" class="donation-success" style="display: none;">
+      <i class="fas fa-check-circle"></i>
+      <h3>Thank You for Your Donation!</h3>
+      <p>Your support helps build resilient futures. A confirmation email has been sent.</p>
+      <button class="success-close-btn" id="successCloseBtn">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-premium">
+  <div class="footer-waves">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="#2D3A2B" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+  
+  <div class="footer-main-content">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Column 1: Brand & Mission -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand-wrapper">
+            <div class="footer-logo-group">
+              <img src="images/logo.png" alt="Mi Future Leaders Logo" class="footer-logo-img" onerror="this.style.display='none'">
+              <div class="footer-brand-text">
+                <span class="footer-brand-name">MI FUTURE</span>
+                <span class="footer-brand-accent">LEADERS</span>
+              </div>
+            </div>
+            <p class="footer-tagline">"Empowering young minds through trauma-informed mental health education."</p>
+            <div class="footer-mission-badge">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span>Strengths-Based · Trauma-Informed · Culturally Sensitive</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links with Icons -->
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-compass"></i>
+              <span>Navigate</span>
+            </h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+              <li><a href="hoem.html"><i class="fas fa-chevron-right"></i> Partners</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Column 3: Contact Info with Style -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-address-card"></i>
+              <span>Connect</span>
+            </h4>
+            <ul class="footer-contact-list">
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:info@mifutureleaders.org">info@mifutureleaders.org</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+27825559900">+27 82 555 9900</a>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon-circle">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="contact-label">Location</span>
+                  <span>Cape Town | Johannesburg</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Column 4: Newsletter & Social -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-section">
+            <h4 class="footer-section-title">
+              <i class="fas fa-star-of-life"></i>
+              <span>Stay Inspired</span>
+            </h4>
+            <p class="footer-newsletter-text">Join our community and receive uplifting stories & mental health resources.</p>
+            <form class="footer-newsletter-form" id="footerNewsletterForm">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+              <div id="footerNewsletterMsg" class="newsletter-feedback"></div>
+            </form>
+            <div class="footer-social-section">
+              <span class="social-label">Follow our journey</span>
+              <div class="social-icons-wrapper">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-flex">
+        <div class="copyright">
+          <i class="far fa-copyright"></i> 2026 Mi Future Leaders — Mental Health Education with Dignity
+        </div>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="separator">•</span>
+          <a href="#">Terms of Service</a>
+          <span class="separator">•</span>
+          <a href="#">Ethical Framework</a>
+        </div>
+        <div class="back-to-top">
+          <button id="backToTopBtn" class="back-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+            <span>Top</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  (function() {
+    // DOM Elements
+    const modal = document.getElementById('donationModal');
+    const openModalBtns = document.querySelectorAll('.btn-donate-gold, a[href="#donate"]');
+    const closeModalBtn = document.getElementById('closeDonationModal');
+    const donationForm = document.getElementById('donationForm');
+    const successDiv = document.getElementById('donationSuccess');
+    const submitBtn = document.getElementById('donationSubmitBtn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
+
+    // Form fields
+    const cardNumberInput = document.getElementById('cardNumber');
+    const expiryInput = document.getElementById('expiryDate');
+    const cvvInput = document.getElementById('cvv');
+    const cardholderNameInput = document.getElementById('cardholderName');
+    const customAmountInput = document.getElementById('customAmount');
+    const amountBtns = document.querySelectorAll('.amount-btn');
+
+    // Error spans
+    const amountError = document.getElementById('amountError');
+    const cardError = document.getElementById('cardError');
+    const expiryError = document.getElementById('expiryError');
+    const cvvError = document.getElementById('cvvError');
+    const nameError = document.getElementById('nameError');
+
+    let selectedAmount = null;
+    let activeAmountBtn = null;
+
+    // Helper: Show/Hide Modal
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      resetForm();
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      resetForm();
+    }
+
+    function resetForm() {
+      donationForm.style.display = 'block';
+      successDiv.style.display = 'none';
+      donationForm.reset();
+      // Clear errors
+      document.querySelectorAll('.error-message').forEach(el => el.innerHTML = '');
+      document.querySelectorAll('.form-input').forEach(el => el.classList.remove('error'));
+      // Reset amount buttons
+      if (activeAmountBtn) {
+        activeAmountBtn.classList.remove('active');
+        activeAmountBtn = null;
+      }
+      selectedAmount = null;
+      customAmountInput.value = '';
+      // Reset card icon
+      document.getElementById('cardIcon').innerHTML = '';
+    }
+
+    // Card Number Formatting & Detection
+    function formatCardNumber(value) {
+      let cleaned = value.replace(/\s/g, '');
+      let formatted = cleaned.replace(/(\d{4})/g, '$1 ').trim();
+      return formatted.substring(0, 19);
+    }
+
+    function getCardType(number) {
+      let cleaned = number.replace(/\s/g, '');
+      if (/^4/.test(cleaned)) return '<i class="fab fa-cc-visa" style="color:#1A1F71;"></i>';
+      if (/^5[1-5]/.test(cleaned)) return '<i class="fab fa-cc-mastercard" style="color:#EB001B;"></i>';
+      if (/^3[47]/.test(cleaned)) return '<i class="fab fa-cc-amex" style="color:#2E77BC;"></i>';
+      if (/^6(?:011|5)/.test(cleaned)) return '<i class="fab fa-cc-discover" style="color:#FF6600;"></i>';
+      return '<i class="far fa-credit-card"></i>';
+    }
+
+    cardNumberInput.addEventListener('input', function(e) {
+      let formatted = formatCardNumber(e.target.value);
+      e.target.value = formatted;
+      const cardIconSpan = document.getElementById('cardIcon');
+      cardIconSpan.innerHTML = getCardType(formatted);
+      if (cardError.innerHTML) cardError.innerHTML = '';
+      e.target.classList.remove('error');
+    });
+
+    // Expiry Date Formatting (MM/YY)
+    expiryInput.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length >= 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2, 4);
+      }
+      e.target.value = value;
+      if (expiryError.innerHTML) expiryError.innerHTML = '';
+      e.target.classList.remove('error');
+    });
+
+    // CVV only digits
+    cvvInput.addEventListener('input', function(e) {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+      if (cvvError.innerHTML) cvvError.innerHTML = '';
+      e.target.classList.remove('error');
+    });
+
+    // Amount selection
+    amountBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (activeAmountBtn) activeAmountBtn.classList.remove('active');
+        this.classList.add('active');
+        activeAmountBtn = this;
+        selectedAmount = parseInt(this.getAttribute('data-amount'));
+        customAmountInput.value = '';
+        if (amountError.innerHTML) amountError.innerHTML = '';
+      });
+    });
+
+    customAmountInput.addEventListener('input', function() {
+      if (activeAmountBtn) {
+        activeAmountBtn.classList.remove('active');
+        activeAmountBtn = null;
+      }
+      selectedAmount = parseInt(this.value);
+      if (isNaN(selectedAmount)) selectedAmount = null;
+      if (amountError.innerHTML) amountError.innerHTML = '';
+    });
+
+    // Validation Functions
+    function validateAmount() {
+      if (!selectedAmount || selectedAmount < 10) {
+        amountError.innerHTML = 'Please select or enter a valid amount (minimum R10)';
+        return false;
+      }
+      amountError.innerHTML = '';
+      return true;
+    }
+
+    function validateCardNumber() {
+      let number = cardNumberInput.value.replace(/\s/g, '');
+      if (!/^\d{13,19}$/.test(number)) {
+        cardError.innerHTML = 'Please enter a valid card number (13-19 digits)';
+        cardNumberInput.classList.add('error');
+        return false;
+      }
+      cardError.innerHTML = '';
+      cardNumberInput.classList.remove('error');
+      return true;
+    }
+
+    function validateExpiry() {
+      let val = expiryInput.value;
+      if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(val)) {
+        expiryError.innerHTML = 'Use MM/YY format';
+        expiryInput.classList.add('error');
+        return false;
+      }
+      let [month, year] = val.split('/');
+      let currentDate = new Date();
+      let currentYear = currentDate.getFullYear() % 100;
+      let currentMonth = currentDate.getMonth() + 1;
+      let expYear = parseInt(year);
+      let expMonth = parseInt(month);
+      if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
+        expiryError.innerHTML = 'Card has expired';
+        expiryInput.classList.add('error');
+        return false;
+      }
+      expiryError.innerHTML = '';
+      expiryInput.classList.remove('error');
+      return true;
+    }
+
+    function validateCVV() {
+      let cvv = cvvInput.value;
+      if (!/^\d{3,4}$/.test(cvv)) {
+        cvvError.innerHTML = 'CVV must be 3 or 4 digits';
+        cvvInput.classList.add('error');
+        return false;
+      }
+      cvvError.innerHTML = '';
+      cvvInput.classList.remove('error');
+      return true;
+    }
+
+    function validateCardholderName() {
+      let name = cardholderNameInput.value.trim();
+      if (name.length < 3) {
+        nameError.innerHTML = 'Enter the full name on card';
+        cardholderNameInput.classList.add('error');
+        return false;
+      }
+      nameError.innerHTML = '';
+      cardholderNameInput.classList.remove('error');
+      return true;
+    }
+
+    // Fake payment processing (demo)
+    function processPayment(amount) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simulate successful transaction (90% success for demo)
+          if (Math.random() > 0.1) {
+            resolve({ success: true, transactionId: 'TXN' + Date.now() });
+          } else {
+            reject({ success: false, message: 'Payment declined. Please try another card.' });
+          }
+        }, 1800);
+      });
+    }
+
+    // Form Submit Handler
+    donationForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Validate all fields
+      const isAmountValid = validateAmount();
+      const isCardValid = validateCardNumber();
+      const isExpiryValid = validateExpiry();
+      const isCvvValid = validateCVV();
+      const isNameValid = validateCardholderName();
+
+      if (!isAmountValid || !isCardValid || !isExpiryValid || !isCvvValid || !isNameValid) {
+        return;
+      }
+
+      // Show loading state
+      btnText.style.display = 'none';
+      btnLoader.style.display = 'inline-block';
+      submitBtn.disabled = true;
+
+      try {
+        // Simulate payment
+        const result = await processPayment(selectedAmount);
+        
+        // Store donation info (optional - you can send to backend)
+        console.log('Donation successful:', {
+          amount: selectedAmount,
+          cardLast4: cardNumberInput.value.replace(/\s/g, '').slice(-4),
+          cardholder: cardholderNameInput.value.trim(),
+          timestamp: new Date().toISOString()
+        });
+
+        // Show success screen
+        donationForm.style.display = 'none';
+        successDiv.style.display = 'flex';
+
+      } catch (error) {
+        // Show error on form
+        const genericError = document.createElement('div');
+        genericError.className = 'error-message';
+        genericError.style.textAlign = 'center';
+        genericError.style.marginTop = '10px';
+        genericError.style.background = '#fff0f0';
+        genericError.style.padding = '8px';
+        genericError.style.borderRadius = '40px';
+        genericError.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + (error.message || 'Transaction failed. Please try again.');
+        
+        const existingError = donationForm.querySelector('.payment-error');
+        if (existingError) existingError.remove();
+        genericError.classList.add('payment-error');
+        donationForm.appendChild(genericError);
+        
+        setTimeout(() => {
+          if (genericError.parentNode) genericError.remove();
+        }, 4000);
+      } finally {
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Success close handler
+    const successCloseBtn = document.getElementById('successCloseBtn');
+    if (successCloseBtn) {
+      successCloseBtn.addEventListener('click', closeModal);
+    }
+
+    // Open modal when Donate buttons clicked
+    openModalBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    // Close modal events
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    // Prevent body scroll when modal open
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  })();
+</script>
+<script>
+  (function() {
+
+      const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Newsletter Form Handler
+    const footerNewsletter = document.getElementById('footerNewsletterForm');
+    const newsletterMsg = document.getElementById('footerNewsletterMsg');
+    
+    if (footerNewsletter) {
+      footerNewsletter.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        
+        if (email && email.includes('@')) {
+          newsletterMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+          newsletterMsg.style.color = '#FFD966';
+          
+          // Simulate subscription (replace with actual API call later)
+          setTimeout(() => {
+            newsletterMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thanks for subscribing! We\'ll keep you inspired.';
+            newsletterMsg.style.color = '#C6A43F';
+            emailInput.value = '';
+            setTimeout(() => {
+              newsletterMsg.innerHTML = '';
+            }, 5000);
+          }, 1000);
+        } else {
+          newsletterMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please enter a valid email address.';
+          newsletterMsg.style.color = '#FFA07A';
+          setTimeout(() => {
+            newsletterMsg.innerHTML = '';
+          }, 3000);
+        }
+      });
+    }
+    const loader = document.getElementById('uniqueLoader');
+    window.addEventListener('load', () => { setTimeout(() => loader.classList.add('hidden'), 500); initScrollReveal(); attachNavScroll(); footerSubscribe(); });
+    
+    function attachNavScroll() {
+      const nav = document.getElementById('royalNav');
+      window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
+    }
+    
+    function initScrollReveal() {
+      const popElements = document.querySelectorAll('.section-pop');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.15 });
+      popElements.forEach(el => observer.observe(el));
+      popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); });
+    }
+    
+    function footerSubscribe() {
+      const btn = document.getElementById('footerSubscribeBtn');
+      if(btn) btn.addEventListener('click', () => {
+        const emailField = document.getElementById('footerEmail');
+        if(emailField && emailField.value.trim() && emailField.value.includes('@')) alert("✨ Thanks! You'll receive our resilience newsletter.");
+        else alert("Please enter a valid email address.");
+      });
+    }
+    
+    // Smooth anchor for any internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        let targetId = this.getAttribute('href');
+        if(targetId && targetId !== '#') {
+          let target = document.querySelector(targetId);
+          if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
