@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Mi Future Leaders • About Us | Core Programs & Board</title>
   <!-- Bootstrap 5 core -->
+   <link rel="icon" type="image/png" href="images/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -950,37 +951,81 @@
       .btn-donate-gold { padding: 6px 20px; font-size: 0.8rem; margin-left: 10px; }
     }
 
-     @media (max-width: 768px) {
-      .nav-logo-img { height: 36px; }
-      .brand-logo-text { font-size: 1.2rem; }
-      .navbar-collapse {
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(10px);
-        border-radius: 24px;
-        padding: 20px;
-        margin-top: 15px;
-      }
-      .navbar-royal.scrolled .navbar-collapse {
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(12px);
-      }
-      .navbar-royal.scrolled .navbar-collapse .nav-link-gold {
-        color: #3B4A35 !important;
-      }
-      .nav-link-gold {
-        text-align: center;
-        margin: 8px 0;
-      }
-      .btn-donate-gold {
-        display: inline-block;
-        margin: 12px auto 0;
-        width: fit-content;
-      }
-      .ms-auto.d-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+    /* ===== LEFT ALIGNMENT FOR MOBILE DEVICES ===== */
+@media (max-width: 768px) {
+  /* Override any center alignment */
+  .footer-main-content {
+    text-align: left;
+  }
+  
+  /* Brand section - left align */
+  .footer-logo-group {
+    justify-content: flex-start;
+  }
+  
+  .footer-brand-text {
+    text-align: left;
+  }
+  
+  .footer-tagline {
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .footer-mission-badge {
+    margin: 10px 0;
+    display: inline-flex;
+    width: auto;
+  }
+  
+  /* Section titles - left align, remove center positioning */
+  .footer-section-title {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .footer-section-title::after {
+    left: 0;
+    transform: none;
+    width: 40px;
+  }
+  
+  /* Links - left align */
+  .footer-links li a {
+    justify-content: flex-start;
+  }
+  
+  /* Contact list - left align */
+  .footer-contact-list li {
+    justify-content: flex-start;
+  }
+  
+  /* Newsletter text - left align */
+  .footer-newsletter-text {
+    text-align: left;
+  }
+  
+  /* Social icons - left align */
+  .social-icons-wrapper {
+    justify-content: flex-start;
+  }
+  
+  /* Bottom bar - left align */
+  .footer-bottom-flex {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .legal-links {
+    justify-content: flex-start;
+  }
+  
+  /* Column containers */
+  .footer-col,
+  .col {
+    text-align: left;
+  }
+}
   </style>
 </head>
 <body>
@@ -1166,19 +1211,17 @@
     <div class="board-carousel-container">
       <div class="board-track" id="boardTrack">
         <!-- First set -->
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Aaron Mlambo</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Dr. Thandiwe Nkosi</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Michael Petersen</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Lerato Dlamini</div><div class="board-role">Programs Director</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-globe"></i></div><div class="board-name">Sipho Khumalo</div><div class="board-role">Community Liaison</div><div class="plus-icon" data-name="Sipho Khumalo" data-role="Community Liaison"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-balance-scale"></i></div><div class="board-name">Nosipho Mbeki</div><div class="board-role">Legal Advisor</div><div class="plus-icon" data-name="Nosipho Mbeki" data-role="Legal Advisor"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Ms Zola Manzini</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Mr Muzi Sandlana</div><div class="board-role">Vice Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Ms Zandile Mashabane</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Ms Wandile Phakathi</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
+        
         <!-- Duplicate set for seamless loop -->
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Aaron Mlambo</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Dr. Thandiwe Nkosi</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Michael Petersen</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Lerato Dlamini</div><div class="board-role">Programs Director</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-globe"></i></div><div class="board-name">Sipho Khumalo</div><div class="board-role">Community Liaison</div><div class="plus-icon" data-name="Sipho Khumalo" data-role="Community Liaison"><i class="fas fa-plus"></i></div></div>
-        <div class="board-card"><div class="board-avatar"><i class="fas fa-balance-scale"></i></div><div class="board-name">Nosipho Mbeki</div><div class="board-role">Legal Advisor</div><div class="plus-icon" data-name="Nosipho Mbeki" data-role="Legal Advisor"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-tie"></i></div><div class="board-name">Ms Zola Manzini</div><div class="board-role">Chairperson</div><div class="plus-icon" data-name="Aaron Mlambo" data-role="Secretary"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-user-graduate"></i></div><div class="board-name">Mr Muzi Sandlana</div><div class="board-role">Vice Chairperson</div><div class="plus-icon" data-name="Dr. Thandiwe Nkosi" data-role="Chairperson"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-chart-line"></i></div><div class="board-name">Ms Zandile Mashabane</div><div class="board-role">Secretary</div><div class="plus-icon" data-name="Michael Petersen" data-role="Treasurer"><i class="fas fa-plus"></i></div></div>
+        <div class="board-card"><div class="board-avatar"><i class="fas fa-hand-sparkles"></i></div><div class="board-name">Ms Wandile Phakathi</div><div class="board-role">Treasurer</div><div class="plus-icon" data-name="Lerato Dlamini" data-role="Programs Director"><i class="fas fa-plus"></i></div></div>
+       
       </div>
     </div>
   </div>
@@ -1198,7 +1241,7 @@
   <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Resilient Minds Programme</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p><strong>6-week group-based emotional literacy programme</strong> delivered in public schools and community centres. Topics include: understanding emotions, stress management, healthy coping, boundaries, identity, and help-seeking.</p></div></div></div>
 </div>
 <div class="modal fade modal-gold" id="programModal2" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Counselling Services</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Non-clinical, trauma-informed emotional support. Short-term supportive counselling focusing on coping skills, emotional regulation, and psychoeducation. Referrals provided for clinical needs.</p></div></div></div></div>
-<div class="modal fade modal-gold" id="programModal3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Workshop & Facilitation</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Mental health awareness sessions, stress management workshops, and resilience facilitation for youth, educators, and community workers. Custom half-day or full-day formats available.</p></div></div></div></div>
+<div class="modal fade modal-gold" id="programModal3" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Workshop & Facilitation</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Mental health awareness sessions, stress management workshops, and resilience facilitation for youth, educators,psychology students/ graduates and community workers. Custom half-day or full-day formats available.</p></div></div></div></div>
 <div class="modal fade modal-gold" id="programModal4" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">M&E & Reporting</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Comprehensive monitoring and evaluation: attendance tracking, pre/post reflection tools, facilitator notes, and impact reports for partners and funders.</p></div></div></div></div>
 <div class="modal fade modal-gold" id="programModal5" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Referral & Signposting</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Warm connections to trusted clinical partners including psychologists, social workers, and community health resources. Ethical boundary maintained — we do not provide therapy.</p></div></div></div></div>
 <div class="modal fade modal-gold" id="programModal6" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Capacity Building</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Training for educators and youth workers: identifying emotional distress, referral pathway guidance, programme adaptation support, and trauma-informed practice embedding.</p></div></div></div></div>

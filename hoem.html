@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Mi Future Leaders • Partners | Our Allies & Collaborators</title>
+  <title>Mi Future Leaders • Partners | ZM Wellness Group</title>
   <!-- Bootstrap 5 core -->
+  <link rel="icon" type="image/png" href="images/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -13,14 +14,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Manrope', sans-serif; background-color: #FCFAF7; color: #2D3A2B; overflow-x: hidden; }
     
-    /* ===== NAVBAR (matching homepage) ===== */
+    /* ===== NAVBAR ===== */
     .navbar-royal { position: fixed; top: 0; left: 0; width: 100%; background: transparent; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); z-index: 1030; padding: 1rem 0; }
     .navbar-royal.scrolled { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); border-bottom: 2px solid #C6A43F; padding: 0.5rem 0; }
     .navbar-royal.scrolled .nav-link-gold { color: #3B4A35 !important; text-shadow: none; }
-    .navbar-royal.scrolled .brand-logo-text { background: linear-gradient(135deg, #A07E2A, #C6A43F); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .nav-logo-img { height: 48px; width: auto; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); transition: all 0.3s ease; animation: logoGlowPulse 2s infinite alternate; }
     @keyframes logoGlowPulse { 0% { filter: drop-shadow(0 0 2px #C6A43F) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); } 100% { filter: drop-shadow(0 0 12px #FFD966) drop-shadow(0 0 6px #FF69B4) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); } }
-    .brand-logo-text { font-family: 'Cinzel', serif; font-size: 1.7rem; font-weight: 800; background: linear-gradient(135deg, #FFF8E7, #FFE5A3); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
     .nav-link-gold { color: white !important; font-weight: 600; margin: 0 12px; position: relative; font-family: 'Cinzel', serif; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); transition: 0.25s; }
     .nav-link-gold::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2.5px; background: #C6A43F; transition: 0.3s ease; }
     .nav-link-gold:hover::after { width: 100%; }
@@ -31,7 +30,7 @@
     .navbar-toggler:focus { box-shadow: none; }
     .navbar-toggler-icon { filter: invert(1); }
     .navbar-royal.scrolled .navbar-toggler-icon { filter: invert(0); }
-    @media (max-width: 768px) { .nav-logo-img { height: 36px; } .brand-logo-text { font-size: 1.2rem; } .navbar-collapse { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); border-radius: 24px; padding: 20px; margin-top: 15px; } .btn-donate-gold { margin: 12px auto 0; display: inline-block; } }
+    @media (max-width: 768px) { .nav-logo-img { height: 36px; } .navbar-collapse { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); border-radius: 24px; padding: 20px; margin-top: 15px; } .btn-donate-gold { margin: 12px auto 0; display: inline-block; } }
 
     /* ===== HERO SECTION ===== */
     .partners-hero { position: relative; width: 100%; min-height: 45vh; background-image: url('images/steven-weeks-DUPFowqI6oI-unsplash.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
@@ -41,7 +40,7 @@
     .partners-hero-sub { color: rgba(255,255,240,0.9); font-size: 1.2rem; margin-top: 1rem; }
     @media (max-width: 768px) { .partners-hero-title { font-size: 2.2rem; } }
 
-    /* ===== GLOBAL 3D STYLES ===== */
+    /* ===== GLOBAL STYLES ===== */
     :root { --sage: #9CAF88; --sage-deep: #6B7F5E; --sage-soft: #E2E9DA; --gold: #C6A43F; --gold-dark: #A07E2A; }
     .section-badge { display: inline-block; background: rgba(198, 164, 63, 0.12); border: 1px solid rgba(198, 164, 63, 0.4); border-radius: 60px; padding: 6px 20px; font-size: 0.75rem; letter-spacing: 2px; color: var(--gold-dark); font-weight: 600; backdrop-filter: blur(4px); }
     .gold-divider { width: 80px; height: 4px; background: linear-gradient(90deg, var(--gold), transparent); border-radius: 4px; margin: 1rem auto; }
@@ -52,7 +51,7 @@
     .global-loader-unique.hidden { opacity: 0; visibility: hidden; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* Partner Category Cards */
+    /* Category Cards (keep categories for context, but actual partner list is singular) */
     .category-card-3d {
       background: white;
       border-radius: 32px;
@@ -61,23 +60,12 @@
       transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
       border: 1px solid rgba(198, 164, 63, 0.15);
       height: 100%;
-      cursor: pointer;
+      cursor: default;
       position: relative;
       overflow: hidden;
     }
-    .category-card-3d::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(198, 164, 63, 0.08), transparent);
-      transition: 0.6s;
-    }
-    .category-card-3d:hover::before { left: 100%; }
     .category-card-3d:hover {
-      transform: translateY(-12px);
+      transform: translateY(-8px);
       border-color: var(--gold);
       box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.2);
     }
@@ -92,65 +80,39 @@
       margin: 0 auto 1.2rem;
       font-size: 2.2rem;
       color: var(--gold-dark);
-      transition: all 0.4s;
     }
-    .category-card-3d:hover .category-icon {
-      transform: rotateY(10deg) scale(1.08);
-      background: linear-gradient(145deg, rgba(198, 164, 63, 0.25), rgba(198, 164, 63, 0.1));
-      color: var(--gold);
-    }
-    .category-count {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--gold-dark);
-      font-family: 'Cinzel', serif;
-      margin: 0.5rem 0;
-    }
+    .category-count { font-size: 2rem; font-weight: 800; color: var(--gold-dark); font-family: 'Cinzel', serif; margin: 0.5rem 0; }
 
-    /* Partner Logo Cards */
-    .partner-logo-card {
+    /* Featured Partner Card - Hero style for ZM Wellness Group */
+    .hero-partner-card {
       background: white;
-      border-radius: 24px;
-      padding: 1.5rem;
+      border-radius: 48px;
+      padding: 2rem;
       text-align: center;
-      transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      border: 1px solid rgba(198, 164, 63, 0.15);
-      height: 100%;
-      cursor: pointer;
+      border: 2px solid var(--gold);
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
+      max-width: 500px;
+      margin: 0 auto;
     }
-    .partner-logo-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      border-color: var(--gold);
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
-    }
-    .logo-placeholder {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(145deg, var(--sage-soft), #f0f4ea);
-      border-radius: 20px;
+    .hero-partner-card:hover { transform: translateY(-10px); box-shadow: 0 30px 50px -12px rgba(198,164,63,0.3); }
+    .hero-logo {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(145deg, #f2e8cf, #e2d5b6);
+      border-radius: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1rem;
-      font-size: 2.5rem;
+      margin: 0 auto 1.5rem;
+      font-size: 4rem;
       color: var(--gold-dark);
       transition: 0.3s;
     }
-    .partner-logo-card:hover .logo-placeholder {
-      background: linear-gradient(145deg, var(--gold), var(--gold-dark));
-      color: white;
-      transform: scale(1.05);
-    }
-    .partner-name {
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      color: #2D3A2B;
-    }
-    .partner-type {
-      font-size: 0.75rem;
-      color: var(--sage-deep);
-      letter-spacing: 1px;
-    }
+    .hero-partner-card:hover .hero-logo { background: linear-gradient(145deg, var(--gold), var(--gold-dark)); color: white; transform: scale(1.02); }
+    .partner-name-hero { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 800; color: #2D3A2B; margin-bottom: 0.5rem; }
+    .partner-type-badge { display: inline-block; background: rgba(198,164,63,0.15); border-radius: 60px; padding: 6px 20px; font-size: 0.8rem; font-weight: 600; color: var(--gold-dark); letter-spacing: 1px; margin-bottom: 1rem; }
+    .partner-description { color: #5a6d53; max-width: 380px; margin: 1rem auto; }
 
     /* Become Partner CTA */
     .become-partner-card {
@@ -161,11 +123,7 @@
       transition: all 0.5s ease;
       border: 1px solid rgba(198, 164, 63, 0.3);
     }
-    .become-partner-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--gold);
-      box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2);
-    }
+    .become-partner-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2); }
     .btn-become-partner {
       background: linear-gradient(145deg, #C6A43F, #A07E2A);
       border: none;
@@ -181,15 +139,42 @@
       gap: 10px;
       transition: all 0.3s ease;
     }
-    .btn-become-partner:hover {
-      transform: translateY(-3px);
-      background: linear-gradient(145deg, #e6c35c, #C6A43F);
-      box-shadow: 0 12px 22px -8px rgba(198, 164, 63, 0.4);
-      color: #1F2E1C;
-    }
+    .btn-become-partner:hover { transform: translateY(-3px); background: linear-gradient(145deg, #e6c35c, #C6A43F); box-shadow: 0 12px 22px -8px rgba(198, 164, 63, 0.4); color: #1F2E1C; }
 
-    /* Footer */
-    .footer-gold-unique { background: #F3F0E8; border-top: 6px solid var(--gold); }
+    /* Footer styles (compact) */
+    .footer-premium { background: linear-gradient(135deg, #1F2E1C 0%, #2D3A2B 50%, #1F2E1C 100%); position: relative; margin-top: 0; }
+    .footer-waves { position: absolute; top: -60px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); }
+    .footer-waves svg { width: 100%; height: 70px; }
+    .footer-main-content { padding: 60px 0 40px 0; position: relative; z-index: 2; }
+    .footer-logo-group { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+    .footer-logo-img { height: 60px; width: auto; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3)); }
+    .footer-brand-name { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 2px; color: #E8D5A3; }
+    .footer-brand-accent { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 600; background: linear-gradient(135deg, #C6A43F, #FFD966); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .footer-tagline { color: #C8D5B5; font-size: 0.95rem; line-height: 1.6; margin: 15px 0; font-style: italic; border-left: 3px solid #C6A43F; padding-left: 16px; }
+    .footer-mission-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(198, 164, 63, 0.15); border: 1px solid rgba(198, 164, 63, 0.4); border-radius: 60px; padding: 8px 18px; font-size: 0.75rem; font-weight: 600; color: #FFE5A3; backdrop-filter: blur(4px); margin-top: 10px; }
+    .footer-section-title { font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; color: #FFE5A3; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; position: relative; padding-bottom: 10px; }
+    .footer-section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #C6A43F, transparent); border-radius: 3px; }
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: #C8D5B5; text-decoration: none; transition: all 0.25s; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+    .footer-links a:hover { color: #FFD966; transform: translateX(6px); }
+    .footer-contact-list { list-style: none; padding: 0; margin: 0; }
+    .footer-contact-list li { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .contact-icon-circle { width: 38px; height: 38px; background: rgba(198, 164, 63, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+    .contact-icon-circle i { color: #C6A43F; font-size: 1rem; }
+    .contact-details a, .contact-details span { color: #E8D5A3; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+    .newsletter-input-group { display: flex; background: rgba(255, 255, 255, 0.08); border-radius: 60px; border: 1px solid rgba(198, 164, 63, 0.4); }
+    .newsletter-input-group input { flex: 1; background: transparent; border: none; padding: 12px 18px; color: white; outline: none; }
+    .newsletter-input-group button { background: linear-gradient(135deg, #C6A43F, #A07E2A); border: none; border-radius: 60px; width: 46px; height: 46px; margin: 3px; cursor: pointer; color: #1F2E1C; }
+    .social-icons-wrapper { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+    .social-icon { width: 40px; height: 40px; background: rgba(198, 164, 63, 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C6A43F; text-decoration: none; transition: all 0.3s; }
+    .social-icon:hover { background: #C6A43F; color: #1F2E1C; transform: translateY(-4px) rotate(360deg); }
+    .footer-bottom { border-top: 1px solid rgba(198, 164, 63, 0.25); padding: 20px 0; background: rgba(0, 0, 0, 0.2); }
+    .footer-bottom-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .copyright { color: #9CAF88; font-size: 0.8rem; }
+    .legal-links a { color: #C8D5B5; text-decoration: none; font-size: 0.75rem; margin: 0 8px; }
+    .back-to-top-btn { background: linear-gradient(135deg, #C6A43F, #A07E2A); border: none; padding: 8px 18px; border-radius: 40px; color: #1F2E1C; font-weight: 700; font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    @media (max-width: 768px) { .footer-bottom-flex { flex-direction: column; text-align: center; } .footer-section-title::after { left: 0; } }
   </style>
 </head>
 <body>
@@ -202,9 +187,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-royal" id="royalNav">
   <div class="container">
-    <a class="navbar-brand" href="hoem.html">
+    <a class="navbar-brand" href="index.html">
       <img src="images/logo.png" alt="Mi Future Leaders Logo" class="nav-logo-img">
-      
     </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#goldNav">
       <span class="navbar-toggler-icon"></span>
@@ -228,75 +212,67 @@
 <section class="partners-hero">
   <div class="partners-hero-overlay"></div>
   <div class="partners-hero-content">
-    <h1 class="partners-hero-title">Our Partners & Allies</h1>
-    <p class="partners-hero-sub">Together we build resilient futures for young leaders across South Africa</p>
+    <h1 class="partners-hero-title">Our Strategic Partner</h1>
+    <p class="partners-hero-sub">Collaborating with purpose to empower young leaders across South Africa</p>
   </div>
 </section>
 
 <main>
-  <!-- DISCLAIMER -->
+  <!-- Disclaimer -->
   <div class="container my-5">
-    <div class="card-3d p-4 text-center section-pop" style="background: linear-gradient(135deg, rgba(156, 175, 136, 0.08), rgba(198, 164, 63, 0.05)); border-radius: 80px 20px 80px 20px; border: 1px solid rgba(198,164,63,0.3);">
+    <div class="p-4 text-center section-pop" style="background: linear-gradient(135deg, rgba(156, 175, 136, 0.08), rgba(198, 164, 63, 0.05)); border-radius: 80px 20px 80px 20px; border: 1px solid rgba(198,164,63,0.3);">
       <i class="bi bi-shield-fill-check fs-2" style="color: var(--gold);"></i>
       <span class="fs-5 fw-semibold ms-2">Mi Future Leaders provides mental health education and early support only — no psychotherapy or clinical diagnosis.</span>
     </div>
   </div>
 
-  <!-- PARTNER CATEGORIES -->
+  <!-- CURRENT PARTNER HIGHLIGHT: ZM Wellness Group -->
   <div class="container my-5 py-4">
     <div class="text-center mb-5 section-pop">
-      <div class="section-badge mx-auto">⚜️ OUR ECOSYSTEM ⚜️</div>
-      <h2 class="display-5 fw-bold gold-text mt-3">Partner Categories</h2>
+      <div class="section-badge mx-auto">⚜️ EXCLUSIVE PARTNER ⚜️</div>
+      <h2 class="display-5 fw-bold gold-text mt-3">Our Trusted Ally</h2>
       <div class="gold-divider mx-auto"></div>
-      <p class="lead text-muted">Diverse collaborators united by a shared mission</p>
+      <p class="lead text-muted">We are proud to be partnered with ZM Wellness Group — a leader in holistic wellness and youth empowerment.</p>
     </div>
-    <div class="row g-4">
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-school"></i></div><h3>Schools</h3><div class="category-count">50+</div><p>Partner schools across Western Cape, Gauteng & KZN</p></div></div>
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>NGOs</h3><div class="category-count">25+</div><p>Child & youth-focused organizations</p></div></div>
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-building"></i></div><h3>Corporate CSI</h3><div class="category-count">15+</div><p>Impact-driven corporate partners</p></div></div>
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-chalkboard"></i></div><h3>Educators</h3><div class="category-count">400+</div><p>Teachers & youth workers trained</p></div></div>
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-users"></i></div><h3>Community Orgs</h3><div class="category-count">30+</div><p>Local community-based organizations</p></div></div>
-      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-heartbeat"></i></div><h3>Clinical Partners</h3><div class="category-count">20+</div><p>Psychologists & social workers for referrals</p></div></div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 section-pop">
+        <div class="hero-partner-card">
+          <div class="hero-logo">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="partner-name-hero">ZM Wellness Group</div>
+          <div class="partner-type-badge">Wellness & Training Partner</div>
+          <p class="partner-description">Dedicated to mental resilience, trauma-informed practices, and building sustainable support systems for South African youth. ZM Wellness Group brings deep expertise in holistic well-being and community-centered programs.</p>
+          <div class="mt-3">
+            <i class="fas fa-map-pin me-1" style="color: var(--gold);"></i> <span class="text-muted">South Africa</span>
+            <span class="mx-2">•</span>
+            <i class="fas fa-handshake me-1" style="color: var(--gold);"></i> <span class="text-muted">Since 2026</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- FEATURED PARTNERS -->
-  <div class="container my-5 py-4">
-    <div class="text-center mb-5 section-pop">
-      <div class="section-badge mx-auto">⚜️ OUR ALLIES ⚜️</div>
-      <h2 class="display-5 fw-bold gold-text mt-3">Featured Partners</h2>
-      <div class="gold-divider mx-auto"></div>
-      <p class="lead text-muted">Trusted collaborators making a difference</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-university"></i></div><div class="partner-name">Western Cape DOE</div><div class="partner-type">Government Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-hand-holding-usd"></i></div><div class="partner-name">The DGMT Trust</div><div class="partner-type">Funding Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-church"></i></div><div class="partner-name">Soul City Institute</div><div class="partner-type">NGO Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-briefcase"></i></div><div class="partner-name">Old Mutual</div><div class="partner-type">Corporate Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-graduation-cap"></i></div><div class="partner-name">UCT</div><div class="partner-type">Academic Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-heart"></i></div><div class="partner-name">SADAG</div><div class="partner-type">Clinical Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-globe"></i></div><div class="partner-name">UNICEF SA</div><div class="partner-type">International Partner</div></div></div>
-      <div class="col-lg-3 col-md-4 col-6 section-pop"><div class="partner-logo-card"><div class="logo-placeholder"><i class="fas fa-tree"></i></div><div class="partner-name">WWF SA</div><div class="partner-type">Community Partner</div></div></div>
-    </div>
-  </div>
-
-  <!-- IMPACT STATS -->
+  <!-- Category showcase (optional context but no other partners) -->
   <div class="container my-5 py-3">
-    <div class="row g-4 text-center">
-      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">3,200+</div><div class="stats-label">Youth Reached</div></div></div>
-      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">400+</div><div class="stats-label">Educators Trained</div></div></div>
-      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">50+</div><div class="stats-label">Schools</div></div></div>
-      <div class="col-md-3 col-6 section-pop"><div class="stats-card"><div class="stats-number">6</div><div class="stats-label">Provinces</div></div></div>
+    <div class="text-center mb-4 section-pop">
+      <div class="section-badge mx-auto">⚜️ OUR COLLABORATION SCOPE ⚜️</div>
+      <h3 class="gold-text mt-3">Working together across key areas</h3>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-brain"></i></div><h3>Mental Health Education</h3><p>Co-developing curricula & workshops</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-chalkboard-user"></i></div><h3>Train-the-Trainer</h3><p>Upskilling educators & youth workers</p></div></div>
+      <div class="col-md-4 section-pop"><div class="category-card-3d"><div class="category-icon"><i class="fas fa-people-arrows"></i></div><h3>Community Outreach</h3><p>Joint wellness initiatives</p></div></div>
     </div>
   </div>
 
-  <!-- BECOME A PARTNER CTA -->
+  <!-- BECOME A PARTNER CTA (future partners) -->
   <div class="container my-5 py-5">
     <div class="become-partner-card section-pop text-center">
       <i class="fas fa-handshake fs-1" style="color: var(--gold-dark); margin-bottom: 1rem;"></i>
-      <h2 class="display-5 fw-bold gold-text">Become a Partner</h2>
+      <h2 class="display-5 fw-bold gold-text">Grow Our Alliance</h2>
       <div class="gold-divider mx-auto"></div>
-      <p class="fs-5" style="max-width: 700px; margin: 1rem auto;">Join us in creating sustainable mental health education for every young leader. Whether you're a school, NGO, corporate, or foundation — let's work together.</p>
+      <p class="fs-5" style="max-width: 700px; margin: 1rem auto;">Interested in joining forces? We are actively seeking aligned organizations to expand our impact. Let’s create a healthier future for South African youth.</p>
       <div class="mt-4">
         <a href="contact.html" class="btn-become-partner"><i class="fas fa-arrow-right"></i> Partner With Us</a>
       </div>
@@ -307,30 +283,60 @@
   </div>
 </main>
 
-<!-- FOOTER -->
-<footer class="footer-gold-unique pt-5 pb-4 mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5">
-        <span style="font-family:'Cinzel'; font-size:2rem; color:var(--gold-dark);">✦ MiFL</span>
-        <p class="small mt-3">Mental health education with dignity. No diagnostic services.</p>
-        <p class="small">© 2026 Mi Future Leaders</p>
+<footer class="footer-premium">
+  <div class="footer-waves"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#2D3A2B" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg></div>
+  <div class="footer-main-content">
+    <div class="container" style="max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+      <div class="row" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+        <div class="col" style="flex: 1 1 280px; min-width: 240px;">
+          <div class="footer-logo-group">
+            <img src="images/logo.png" alt="Mi Future Leaders Logo" class="footer-logo-img" onerror="this.style.display='none'">
+            <div><span class="footer-brand-name">MI FUTURE</span><br><span class="footer-brand-accent">LEADERS</span></div>
+          </div>
+          <p class="footer-tagline">"Empowering young minds through trauma-informed mental health education."</p>
+          <div class="footer-mission-badge"><i class="fas fa-hand-holding-heart"></i><span>Strengths-Based · Trauma-Informed · Culturally Sensitive</span></div>
+        </div>
+        <div class="col" style="flex: 1 1 200px; min-width: 180px;">
+          <h4 class="footer-section-title"><i class="fas fa-compass"></i><span>Navigate</span></h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="hoem.html"><i class="fas fa-chevron-right"></i> Partners</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col" style="flex: 1 1 260px; min-width: 220px;">
+          <h4 class="footer-section-title"><i class="fas fa-address-card"></i><span>Connect</span></h4>
+          <ul class="footer-contact-list">
+            <li><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><div class="contact-details"><span class="contact-label">Email</span><a href="mailto:info@mifutureleaders.org">info@mifutureleaders.org</a></div></li>
+            <li><div class="contact-icon-circle"><i class="fas fa-phone-alt"></i></div><div class="contact-details"><span class="contact-label">Phone</span><a href="tel:+27825559900">+27 82 555 9900</a></div></li>
+            <li><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><span class="contact-label">Location</span><span>Cape Town | Johannesburg</span></div></li>
+          </ul>
+        </div>
+        <div class="col" style="flex: 1 1 280px; min-width: 240px;">
+          <h4 class="footer-section-title"><i class="fas fa-star-of-life"></i><span>Stay Inspired</span></h4>
+          <p class="footer-newsletter-text">Join our community for uplifting stories & resources.</p>
+          <form class="footer-newsletter-form" id="footerNewsletterForm">
+            <div class="newsletter-input-group"><input type="email" placeholder="Your email address" required><button type="submit"><i class="fas fa-paper-plane"></i></button></div>
+            <div id="footerNewsletterMsg" class="newsletter-feedback"></div>
+          </form>
+          <div class="social-icons-wrapper">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3">
-        <h6 class="fw-bold gold-text">NAVIGATE</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
-          <li><a href="about.html" class="text-decoration-none text-dark">About</a></li>
-          <li><a href="service.html" class="text-decoration-none text-dark">Services</a></li>
-          <li><a href="hoem.html" class="text-decoration-none text-dark">Partners</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-bold gold-text">OUR COMMITMENT</h6>
-        <p class="small">Trauma-informed, strengths-based, ethical boundaries.</p>
-        <p class="small mt-2"><i class="fas fa-phone-alt me-2"></i>082 303 6050</p>
-        <p class="small"><i class="fas fa-envelope me-2"></i>info@mifutureleaders.org</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="max-width: 1320px; margin: 0 auto; padding: 0 20px;">
+      <div class="footer-bottom-flex">
+        <div class="copyright"><i class="far fa-copyright"></i> 2026 Mi Future Leaders — Mental Health Education with Dignity</div>
+        <div class="legal-links"><a href="#">Privacy Policy</a><span class="separator">•</span><a href="#">Terms</a><span class="separator">•</span><a href="#">Ethical Framework</a></div>
+        <button id="backToTopBtn" class="back-to-top-btn"><i class="fas fa-arrow-up"></i><span>Top</span></button>
       </div>
     </div>
   </div>
@@ -341,51 +347,11 @@
   (function() {
     const loader = document.getElementById('uniqueLoader');
     window.addEventListener('load', () => { setTimeout(() => loader.classList.add('hidden'), 500); initScrollReveal(); attachNavScroll(); });
-    
-    function attachNavScroll() {
-      const nav = document.getElementById('royalNav');
-      window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
-    }
-    
-    function initScrollReveal() {
-      const popElements = document.querySelectorAll('.section-pop');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-      }, { threshold: 0.15 });
-      popElements.forEach(el => observer.observe(el));
-      popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); });
-    }
-    
-    // Stats cards animation
-    const statsNumbers = document.querySelectorAll('.stats-number');
-    statsNumbers.forEach(el => {
-      const originalText = el.innerText;
-      el.setAttribute('data-target', originalText.replace(/[^0-9]/g, ''));
-      el.innerText = '0';
-    });
-    
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target'));
-          let current = 0;
-          const increment = target / 50;
-          const timer = setInterval(() => {
-            current += increment;
-            if(current >= target) {
-              el.innerText = target.toLocaleString() + (el.innerText.includes('+') ? '+' : '');
-              clearInterval(timer);
-            } else {
-              el.innerText = Math.floor(current).toLocaleString() + (el.innerText.includes('+') ? '+' : '');
-            }
-          }, 30);
-          statsObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    document.querySelectorAll('.stats-number').forEach(el => statsObserver.observe(el));
+    function attachNavScroll() { const nav = document.getElementById('royalNav'); window.addEventListener('scroll', () => { if(window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }); }
+    function initScrollReveal() { const popElements = document.querySelectorAll('.section-pop'); const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.15 }); popElements.forEach(el => observer.observe(el)); popElements.forEach(el => { if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); }); }
+    const backToTopBtn = document.getElementById('backToTopBtn'); if(backToTopBtn) backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const footerNewsletter = document.getElementById('footerNewsletterForm'); const newsletterMsg = document.getElementById('footerNewsletterMsg');
+    if(footerNewsletter) { footerNewsletter.addEventListener('submit', (e) => { e.preventDefault(); const emailInput = footerNewsletter.querySelector('input[type="email"]'); const email = emailInput.value.trim(); if(email && email.includes('@')) { newsletterMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...'; setTimeout(() => { newsletterMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thanks for subscribing!'; emailInput.value = ''; setTimeout(() => newsletterMsg.innerHTML = '', 4000); }, 800); } else { newsletterMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Valid email required.'; setTimeout(() => newsletterMsg.innerHTML = '', 3000); } }); }
   })();
 </script>
 </body>
