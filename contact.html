@@ -931,19 +931,19 @@
   <!-- CONTACT INFO CARDS -->
   <div class="container my-5 py-4">
     <div class="row g-4">
-      <!-- <div class="col-md-4 section-pop">
+      <div class="col-md-4 section-pop">
         <div class="contact-info-card">
           <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h4>Visit Us</h4>
-          <p>76 Strand Street, Cape Town<br>8001, South Africa</p>
-          <p class="mt-2"><small>Johannesburg: 15 Skeen Blvd, Braamfontein</small></p>
+          <p>Nkomazi and Mbombela Mpumalanga<br> South Africa</p>
+          
         </div>
-      </div> -->
+      </div>
       <div class="col-md-4 section-pop">
         <div class="contact-info-card">
           <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
           <h4>Call Us</h4>
-          <p><a href="tel:+27825559900">+27 82 555 9900</a></p>
+          <p><a href="tel:+27823036050">+27 82 303 6050</a></p>
           <p><small>Mon-Fri: 9am - 5pm</small></p>
         </div>
       </div>
@@ -967,9 +967,11 @@
           <hr class="gold-hr">
           <p class="mb-4">Fill out the form below and our team will respond within 24 hours.</p>
           
-          <form id="contactPageForm">
+          <form id="contactPageForm" action="contact-handler.php" method="POST">
             <div class="row g-3">
               <div class="col-md-6">
+                <!-- Honeypot field - leave empty -->
+                <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
                 <input type="text" class="form-control form-control-custom" id="contactFirstName" placeholder="First Name" required>
               </div>
               <div class="col-md-6">
@@ -1079,7 +1081,7 @@
         </div>
         <div class="faq-item section-pop">
           <div class="faq-question">
-            <span>Do you work outside Cape Town and Johannesburg?</span>
+            <span>Do you work outside Nkomazi and Mbombela?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
@@ -1158,7 +1160,7 @@
                   </div>
                   <div class="contact-details">
                     <span class="contact-label">Phone</span>
-                    <a href="tel:+27825559900">+27 82 555 9900</a>
+                    <a href="tel:+27823036050">+27 82 303 6050</a>
                   </div>
                 </li>
                 <li>
@@ -1167,7 +1169,7 @@
                   </div>
                   <div class="contact-details">
                     <span class="contact-label">Location</span>
-                    <span>Cape Town | Johannesburg</span>
+                    <span>Nkomazi and Mbombela Mpumalanga South Africa</span>
                   </div>
                 </li>
               </ul>
@@ -1182,7 +1184,7 @@
                 <span>Stay Inspired</span>
               </h4>
               <p class="footer-newsletter-text">Join our community and receive uplifting stories & mental health resources.</p>
-              <form class="footer-newsletter-form" id="footerNewsletterForm">
+              <!-- <form class="footer-newsletter-form" id="footerNewsletterForm">
                 <div class="newsletter-input-group">
                   <input type="email" placeholder="Your email address" required>
                   <button type="submit">
@@ -1190,7 +1192,7 @@
                   </button>
                 </div>
                 <div id="footerNewsletterMsg" class="newsletter-feedback"></div>
-              </form>
+              </form> -->
               <div class="footer-social-section">
                 <span class="social-label">Follow our journey</span>
                 <div class="social-icons-wrapper">
@@ -1270,15 +1272,17 @@
       });
     });
     
-    // Contact Form Handler
     const contactForm = document.getElementById('contactPageForm');
-    const submitBtn = document.getElementById('contactSubmitBtn');
-    const btnTextSpan = submitBtn.querySelector('.btn-text');
-    const btnSpinner = submitBtn.querySelector('.btn-spinner');
-    const feedbackDiv = document.getElementById('contactFormFeedback');
+const submitBtn = document.getElementById('contactSubmitBtn');
+const btnTextSpan = submitBtn.querySelector('.btn-text');
+const btnSpinner = submitBtn.querySelector('.btn-spinner');
+const feedbackDiv = document.getElementById('contactFormFeedback');
+
+if(contactForm) {
+    // Remove the old submit listener and add this one
+    contactForm.removeEventListener('submit', () => {});
     
-    if(contactForm) {
-      contactForm.addEventListener('submit', async function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Basic validation
@@ -1288,48 +1292,68 @@
         const message = document.getElementById('contactMessage');
         let isValid = true;
         
+        // Reset error styling
+        document.querySelectorAll('.error').forEach(field => field.classList.remove('error'));
+        
         [firstName, lastName, email, message].forEach(field => {
-          if(!field.value.trim()) {
-            field.classList.add('error');
-            isValid = false;
-          } else {
-            field.classList.remove('error');
-          }
+            if(!field.value.trim()) {
+                field.classList.add('error');
+                isValid = false;
+            }
         });
         
         if(email.value.trim() && !email.value.includes('@')) {
-          email.classList.add('error');
-          isValid = false;
+            email.classList.add('error');
+            isValid = false;
         }
         
         if(!isValid) {
-          feedbackDiv.innerHTML = '<span style="color:#dc3545;"><i class="fas fa-exclamation-triangle"></i> Please fill in all required fields.</span>';
-          setTimeout(() => feedbackDiv.innerHTML = '', 3000);
-          return;
+            feedbackDiv.innerHTML = '<span style="color:#dc3545;"><i class="fas fa-exclamation-triangle"></i> Please fill in all required fields.</span>';
+            setTimeout(() => feedbackDiv.innerHTML = '', 3000);
+            return;
         }
         
-        // Show loading
+        // Show loading state
         btnTextSpan.style.display = 'none';
         btnSpinner.style.display = 'inline-block';
         submitBtn.disabled = true;
         
-        // Simulate form submission
-        setTimeout(() => {
-          feedbackDiv.innerHTML = '<span style="color:#A07E2A;"><i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We\'ll respond within 24 hours.</span>';
-          contactForm.reset();
-          btnTextSpan.style.display = 'inline';
-          btnSpinner.style.display = 'none';
-          submitBtn.disabled = false;
-          
-          setTimeout(() => { feedbackDiv.innerHTML = ''; }, 5000);
-        }, 1500);
-      });
-      
-      // Remove error class on input
-      document.querySelectorAll('#contactPageForm input, #contactPageForm textarea, #contactPageForm select').forEach(field => {
-        field.addEventListener('input', function() { this.classList.remove('error'); });
-      });
-    }
+        // Collect form data
+        const formData = new FormData();
+        formData.append('firstName', firstName.value.trim());
+        formData.append('lastName', document.getElementById('contactLastName').value.trim());
+        formData.append('email', email.value.trim());
+        formData.append('phone', document.getElementById('contactPhone').value.trim());
+        formData.append('subject', document.getElementById('contactSubject').value);
+        formData.append('message', message.value.trim());
+        
+        try {
+            const response = await fetch('contact-handler.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if(result.success) {
+                feedbackDiv.innerHTML = `<span style="color:#A07E2A;"><i class="fas fa-check-circle"></i> ${result.message}</span>`;
+                contactForm.reset();
+            } else {
+                feedbackDiv.innerHTML = `<span style="color:#dc3545;"><i class="fas fa-exclamation-triangle"></i> ${result.message}</span>`;
+            }
+        } catch(error) {
+            feedbackDiv.innerHTML = '<span style="color:#dc3545;"><i class="fas fa-exclamation-triangle"></i> Connection error. Please try again.</span>';
+        } finally {
+            btnTextSpan.style.display = 'inline';
+            btnSpinner.style.display = 'none';
+            submitBtn.disabled = false;
+            
+            setTimeout(() => {
+                feedbackDiv.innerHTML = '';
+            }, 5000);
+        }
+    });
+}
     
     // Newsletter Form
     const footerNewsletter = document.getElementById('footerNewsletterForm');
